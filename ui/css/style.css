@@ -4,6 +4,9 @@
 	list-style: none;
 	text-decoration:none;
 }
+body{
+	min-width: 480px;
+}
 																		/**header**/
 .header{
 	position: absolute;
@@ -896,5 +899,5 @@
 @media screen and (max-width: 480px){
 	.nav-brand {
     width: 50%;
-}
+	}
 }
