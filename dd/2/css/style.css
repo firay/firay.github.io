@@ -701,10 +701,17 @@ span.dot-1 {
 	}
     .be-1 {
     top: -35px;
-}
-@media screen and (max-width: 370px){
-	.nav-bar ul li a {
-	padding:8px;
 	}
-
-}
+    .nav-bar ul li a {
+	padding:9px;
+	font-size: 13px;
+	}
+	.nav-bar ul li a:hover{
+	font-size: 15px;
+	}
+	.about-us {
+    margin-top: 230px;	
+	}
+	.nav-bar ul {
+		max-width: 300px
+	}

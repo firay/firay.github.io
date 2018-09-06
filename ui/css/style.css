@@ -789,12 +789,12 @@ body{
 		overflow: hidden;
 	}
 	.gelary-item {
-    position: relative;
-    float: left;
-    padding-left: 1%;
-    width: 48%;
-    overflow: hidden;
-}
+    	position: relative;
+		float: left;
+		padding-left: 1%;
+   		 width: 48%;
+    	overflow: hidden;
+	}
 }
 @media screen and (max-width: 920px){
 	.nav{
@@ -802,8 +802,8 @@ body{
 		width:100%;
 	}
 	.search-holder {
-    position: absolute;
-    top: 30px;
+   		 position: absolute;
+   		 top: 30px;
 	}
 	.nav-brand {
 		display: block;
@@ -859,7 +859,7 @@ body{
 		padding-top: 10px; 
 	}
 	.mobile-pos{
-	width:0%;
+		width:0%;
 	}
 	.mobile-text{
 		width:100%;
@@ -872,18 +872,18 @@ body{
 }
 @media screen and (max-width: 609px){
 	.slide img {
-	width: 200%;
-	min-height: 500px;
+		width: 200%;
+		min-height: 500px;
 	}
 	.nav-brand {
-    width: 40%;
+   		 width: 40%;
 	}
 	.slide-text {
-    position: absolute;
-    width: 100%;
-    top: 35%;
-    z-index: 4;
-    color: #ffffff;
+	    position: absolute;
+	    width: 100%;
+	    top: 35%;
+	    z-index: 4;
+	    color: #ffffff;
 	}
 	.sl-slide-2{
 		width: 48%;
@@ -898,25 +898,38 @@ body{
 }
 @media screen and (max-width: 480px){
 	.nav-brand {
-    width: 190px;
-	}	.works-wrap ul{
-		width: 92%;
+    	width: 80px;
+	}	
+	.nav-brand span{
+		display: none;
 	}
-	.footer-wrap .ul-1,.ul-2{
-	float: left;
-	width: 100%;
+	.btn-4{
+		margin-top: 5px;
+	}	
+	.waxom{
+		height: 100px;
+	}	
+	.works-wrap ul{
+		width: 92%;
 	}
 	.ul-2{
 		padding-top: 5px;
 	}
+	.footer{
+		height: 130px;
+	}	
+	.footer-wrap .ul-1,.ul-2{
+		float: left;
+		width: 100%;
+	}
 	.footer-wrap ul li a{
-	font-size: 14px;
-	padding: 3px 6px 3px 6px;
+		font-size: 14px;
+		padding: 3px 6px 3px 6px;
 	}
 	.footer-wrap ul li a :hover{
-	font-size: 16px;
+		font-size: 16px;
 	}
-	.footer{
-	height: 130px;
-	}
+
+
+
 }
