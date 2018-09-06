@@ -149,7 +149,7 @@ body {
 	top:-13px;
 	margin-left: 130px;
 	transition:0.5s opacity;
-	box-shadow: 0 0 30px rgb(249, 249, 249, 0.72);
+	box-shadow: 0 0 30px #fff;
 }
 .show-1 img{
 	width: 100%;
@@ -254,12 +254,12 @@ body {
 .nided-row a:hover{
 	font-size: 22px;
 }
-.nided-img{
+.nidedimg{
 	width: 55%;
 	float: left;
 	overflow: hidden;
 }
-.nided-img img {
+.nidedimg img {
 	width: 100%;
 }
 																		/**псд блок**/
@@ -395,7 +395,7 @@ span.dot-1 {
 	margin:0 auto;
 	background-color:#ffffff;
 	padding:20px 0 20px 0;
-	box-shadow:0 0 30px #4856658c;
+	box-shadow:0 0 30px #9099b2;
 
 }
 .pric-pos ul li {
