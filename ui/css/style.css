@@ -804,6 +804,7 @@ body{
 	.search-holder {
    		 position: absolute;
    		 top: 30px;
+   		 right: 20px;
 	}
 	.nav-brand {
 		display: block;
