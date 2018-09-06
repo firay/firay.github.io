@@ -633,7 +633,14 @@ span.dot-1 {
 		margin: 0 auto;
 	}
 	.nav-bar ul li a {
-		padding:10px 12px 10px 12px;
+		padding:9px;
+		font-size: 13px;
+	}
+	.nav-bar ul li a:hover{
+		font-size: 15px;
+	}
+	.nav-bar ul li a.login{
+		margin-left: 10px;
 	}
 	.nav-brand {
 		display: block;
@@ -662,9 +669,6 @@ span.dot-1 {
 	.be-1 b{
 		margin-left: 0px;
 	}
-	.nav-bar ul li a {
-		padding:10px 12px 10px 12px  ;
-	}
 	.nided-text {
     	width: 100%;
 	}
@@ -682,21 +686,10 @@ span.dot-1 {
 }
 @media screen and (max-width: 450px){
 
-    .nav-bar ul li a {
-		padding:9px;
-		font-size: 13px;
-	}
-	.nav-bar ul li a.login{
-		margin-left: 10px;
-	}
-	.nav-bar ul li a:hover{
-		font-size: 15px;
-	}
 	.about-us {
  	   margin-top: 230px;	
 	}
 	.nav-bar ul {
-		max-width: 480px;
 		min-width: 320px
 	}    
 	.ul-1,.ul-2{
