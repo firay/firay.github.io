@@ -722,10 +722,7 @@ span.dot-1 {
 		width: 100%;
 	    margin: 40px 0% 0 0%;
 	}	
-	.be {
-   	 	top: -35px;
-	}
-    .be-1 {
-    	top: -35px;
+	.be,.be-1{  	 	
+		top: -30px;
 	}
 }
