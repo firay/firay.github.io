@@ -9,7 +9,9 @@ body {
 }
 																		/**header**/
 .header{
+	overflow: hidden;
 	height: 140px;
+	z-index: 1;
 	background-color: #0e1a35;
 }
 .nav{
@@ -55,6 +57,8 @@ body {
 }
 																		/**фон**/
 .home{
+	margin-top: -2px;
+	z-index: 2;
 	position:relative;
 	background-color: #0e1a35;
 	height: 800px;
@@ -607,6 +611,7 @@ span.dot-1 {
 	}
 	.ul-3{
 		width:100%;
+		padding: 30px 0% 0px 0%;
 	}
 	.ul-3 ul {
 		max-width: 480px;
@@ -646,7 +651,7 @@ span.dot-1 {
 	}
 	.nav-bar ul {
 		position: relative;
-		max-width: 480px;
+		max-width: 410px;
 		margin: 0 auto;
 	}
 	.nav-bar ul li a {
@@ -664,6 +669,42 @@ span.dot-1 {
 		margin-left: 0px;
 	}
 	.nav-bar ul li a {
-	padding:10px 12px 10px 12px  ;
+		padding:10px 12px 10px 12px  ;
 	}
+	.nided-text {
+    width: 100%;
+	}
+	.nidedimg {
+    width: 100%;
+	}
+	.nided-row {
+    position: relative;
+    width: 100%;
+    right: 0px;
+    top: -18px;
+    }
+}
+@media screen and (max-width: 450px){
+    .ul-1,.ul-2{
+    width: 100%;
+    padding: 30px 0% 0px 0%;
+	}
+	.pric-pos-1,.pric-pos-2,.pric-pos-3{
+	width: 100%;
+	margin-top: 20px;
+	}
+	.pric-pos-3{
+	margin: 20px 0% 0 0%;
+	}
+	.be {
+    top: -35px;
+	}
+    .be-1 {
+    top: -35px;
+}
+@media screen and (max-width: 370px){
+	.nav-bar ul li a {
+	padding:8px;
+	}
+
 }
