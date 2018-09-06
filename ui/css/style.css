@@ -899,10 +899,24 @@ body{
 @media screen and (max-width: 480px){
 	.nav-brand {
     width: 183px;
-	}
-}
-@media screen and (max-width: 450px){
-	.works-wrap ul{
+	}	.works-wrap ul{
 		width: 92%;
+	}
+	.footer-wrap .ul-1,.ul-2{
+	float: left;
+	width: 100%;
+	}
+	.ul-2{
+		padding-top: 5px;
+	}
+	.footer-wrap ul li a{
+	font-size: 14px;
+	padding: 3px 6px 3px 6px;
+	}
+	.footer-wrap ul li a :hover{
+	font-size: 16px;
+	}
+	.footer{
+	height: 130px;
 	}
 }
