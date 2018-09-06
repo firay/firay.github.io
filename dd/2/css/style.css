@@ -696,7 +696,8 @@ span.dot-1 {
  	   margin-top: 230px;	
 	}
 	.nav-bar ul {
-		max-width: 320px
+		max-width: 480px;
+		min-width: 320px
 	}    
 	.ul-1,.ul-2{
     	width: 100%;
