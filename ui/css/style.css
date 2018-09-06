@@ -4,9 +4,6 @@
 	list-style: none;
 	text-decoration:none;
 }
-body{
-	min-width: 480px;
-}
 																		/**header**/
 .header{
 	position: absolute;
@@ -898,11 +895,11 @@ body{
 }
 @media screen and (max-width: 480px){
 	.nav-brand {
-    width: 39%;
+    width: 183px;
 	}
 }
 @media screen and (max-width: 460px){
 	.nav-brand {
-    width: 42%;
+   
 	}
 }

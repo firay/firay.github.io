@@ -6,7 +6,6 @@
 }
 body {
 	background-color:#f7f8fa;
-	min-width: 480px;
 }
 																		/**header**/
 .header{
@@ -646,18 +645,25 @@ span.dot-1 {
 		padding-top: 10px;
 	}
 	.nav-bar ul {
+		position: relative;
 		max-width: 480px;
 		margin: 0 auto;
+	}
+	.nav-bar ul li a {
+	padding:10px 12px 10px 12px;
 	}
 	.nav-brand {
 		display: block;
 		max-width: 100px;
-		margin: 0 auto;
+		margin: 0  auto;
 	}
 	
 }
 @media screen and (max-width: 500px){
 	.be-1 b{
 		margin-left: 0px;
-	}	
+	}
+	.nav-bar ul li a {
+	padding:10px 12px 10px 12px  ;
+	}
 }
