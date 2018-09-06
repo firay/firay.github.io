@@ -901,3 +901,8 @@ body{
     width: 183px;
 	}
 }
+@media screen and (max-width: 450px){
+	.works-wrap ul{
+		width: 92%;
+	}
+}
