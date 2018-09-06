@@ -10,7 +10,7 @@ body {
 }
 																		/**header**/
 .header{
-	height: 120px;
+	height: 140px;
 	background-color: #0e1a35;
 }
 .nav{
@@ -20,7 +20,7 @@ body {
 	margin: 0px auto; 
 }
 .nav-brand{
-	float: left;
+	display: inline-block;
 	width:220px;
 	overflow: hidden;
 }
@@ -619,10 +619,10 @@ span.dot-1 {
 		border-top: 2px solid #0e1a35; 
 	}
 	.nav{
-		top:20px;
+		top:30px;
 	}
 	.nav-brand{
-		padding-top: 0px;
+		padding-top: 15px;
 		width:100px;
 	}
 	.about-us{
@@ -638,6 +638,23 @@ span.dot-1 {
 		right: 0px;
 		top:180px;
 	}
+}
+@media screen and (max-width: 600px){
+	.nav-bar{
+		position:relative;
+		width: 100%;
+		padding-top: 10px;
+	}
+	.nav-bar ul {
+		max-width: 480px;
+		margin: 0 auto;
+	}
+	.nav-brand {
+		display: block;
+		max-width: 100px;
+		margin: 0 auto;
+	}
+	
 }
 @media screen and (max-width: 500px){
 	.be-1 b{

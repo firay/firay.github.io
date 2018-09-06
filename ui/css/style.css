@@ -898,6 +898,11 @@ body{
 }
 @media screen and (max-width: 480px){
 	.nav-brand {
-    width: 50%;
+    width: 39%;
+	}
+}
+@media screen and (max-width: 460px){
+	.nav-brand {
+    width: 42%;
 	}
 }
