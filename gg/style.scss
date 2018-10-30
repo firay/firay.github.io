@@ -78,17 +78,22 @@ ul {
 	color: $white;
 	width:150px;
 	float: left;
+	position: relative;
 		b{
 			font-size: $fz+8px;
-			display: block;
+			display: inline-block;
 			float: left;
+			width: 81px;
 			line-height: 40px;
 		}
 		span{
-			color: $grey;
+			position: absolute;
 			display: block;
+			right:0;
+			color: $grey;
 			margin-left: 10px;
-			float:left;
+			width: 65px;
+			top: 2px;
 		}
 }
 .nav-ul{
@@ -869,6 +874,9 @@ li:last-child{
 	}
 }
 @media screen and(max-width: 510px){
+	.nav-brand span{
+		display: none;
+	}
 	.nav-wrap{
 		padding: 40px 10px 0 10px;
 	}
@@ -893,11 +901,6 @@ li:last-child{
 	.nav-info{
 		margin-top:5px;
 	}	
-}
-@media screen and(max-width: 330px){
-	.nav-brand span{
-		display: none;
-	}
 }
 
 

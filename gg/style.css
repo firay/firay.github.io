@@ -75,18 +75,23 @@ ul {
   color: #fffefe;
   width: 150px;
   float: left;
+  position: relative;
 }
 .nav-brand b {
   font-size: 25px;
-  display: block;
+  display: inline-block;
   float: left;
+  width: 81px;
   line-height: 40px;
 }
 .nav-brand span {
-  color: #999999;
+  position: absolute;
   display: block;
+  right: 0;
+  color: #999999;
   margin-left: 10px;
-  float: left;
+  width: 65px;
+  top: 2px;
 }
 
 .nav-ul {
@@ -947,6 +952,10 @@ h3 {
   }
 }
 @media screen and (max-width: 510px) {
+  .nav-brand span {
+    display: none;
+  }
+
   .nav-wrap {
     padding: 40px 10px 0 10px;
   }
@@ -975,11 +984,6 @@ h3 {
 
   .nav-info {
     margin-top: 5px;
-  }
-}
-@media screen and (max-width: 330px) {
-  .nav-brand span {
-    display: none;
   }
 }
 
