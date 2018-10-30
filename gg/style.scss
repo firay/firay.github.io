@@ -786,6 +786,7 @@ li:last-child{
 		text-align: center;
 	}
 	.customize-text{
+		margin-left:0;
 		text-align: center;
 		width:100%;
 	}
@@ -866,29 +867,11 @@ li:last-child{
 		margin-top:35px;
 		margin-left: 160px;
 	}
-
-
-	.five ,.three ,.for{
-		position: absolute;
-		width: 100px;
-		margin-top:35px;
-	}
-	.three{
-		margin-left: 0px;
-	}
-	.for{
-		margin-left: 100px;
-	}
-	.five{
-		margin-left: 150px;
-	}
-}
-@media screen and(max-width: 510px){
 	.nav-brand span{
 		display: none;
 	}
 	.nav-wrap{
-		padding: 40px 5px 0 5px;
+		padding: 20px 5px 0 5px;
 	}
 	.nav-a-pos a.features, .nav-a-pos a.download{
  		position: absolute;
@@ -910,8 +893,19 @@ li:last-child{
 	}
 	.nav-info{
 		margin-top:5px;
+	}
+	.customize-text p {
+    margin-top: 15px;
+    padding: 0px 5px;
 	}	
 }
+@media screen and (max-width:400px){
+	.text-a a.features, .text-a a.download{
+		width: 100px;
+ 		padding: 10px 5px;
+	}
+}
+
 
 
 
