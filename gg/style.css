@@ -772,7 +772,7 @@ h3 {
     left: 20px;
   }
 
-  a.features {
+  .text-a a.features {
     right: 20px;
   }
 
@@ -1012,6 +1012,11 @@ h3 {
   }
 }
 @media screen and (max-width: 420px) {
+  .nav-a-pos a {
+    padding: 5px;
+    width: 100px;
+  }
+
   .text-a a.features, .text-a a.download {
     top: 67px;
     padding: 8px 5px;
