@@ -30,7 +30,7 @@ $(function(){
 // Menu js for Position fixed
     $(window).scroll(function(){
       var window_top = $(window).scrollTop() + 2; 
-        if (window_top > 1000) {
+        if (window_top > 725){
           $('.nav-ul').addClass('nav-ul_fixed animated fadeInDown');
         } else {
           $('.nav-ul').removeClass('nav-ul_fixed animated fadeInDown');

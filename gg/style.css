@@ -827,10 +827,6 @@ h3 {
     font-size: 17px;
   }
 
-  .nav-a-pos {
-    height: 42px;
-  }
-
   .nav-a-pos a.features {
     right: 10px;
   }
@@ -972,6 +968,10 @@ h3 {
     width: 100px;
     padding: 10px 5px;
     margin-top: 10px;
+  }
+
+  .nav-text {
+    height: 400px;
   }
 
   .nav-text .name, h1 {

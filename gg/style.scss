@@ -766,9 +766,6 @@ li:last-child{
 	.nav-ul  a:hover{
 		font-size:17px;
 	}
-	.nav-a-pos{
-		height: 42px;
-	}
 	.nav-a-pos a.features{
 		right: 10px;
 	}
@@ -887,6 +884,9 @@ li:last-child{
  		padding: 10px 5px;
  		margin-top:10px;
 	}
+	.nav-text{
+		height: 400px;
+	}
 	.nav-text .name ,h1{
 		display:block;
 		text-align:center;
@@ -897,9 +897,6 @@ li:last-child{
 	}
 	.nav-a-pos{
 		margin-top:5px;
-		height: 100px;
-		overflow: hidden;
-
 	}
 	.nav-info{
 		margin-top:5px;
