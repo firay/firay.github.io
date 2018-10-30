@@ -827,8 +827,16 @@ h3 {
     font-size: 17px;
   }
 
+  .nav-a-pos {
+    height: 42px;
+  }
+
   .nav-a-pos a.features {
-    right: 0px;
+    right: 10px;
+  }
+
+  .product ul li b {
+    font-size: 18px;
   }
 
   .diteils-img {
@@ -887,6 +895,7 @@ h3 {
     font-size: 16px;
     width: 100px;
     padding: 20px;
+    text-align: center;
   }
 
   .text-row {

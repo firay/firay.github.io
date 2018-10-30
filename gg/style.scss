@@ -766,8 +766,14 @@ li:last-child{
 	.nav-ul  a:hover{
 		font-size:17px;
 	}
+	.nav-a-pos{
+		height: 42px;
+	}
 	.nav-a-pos a.features{
-		right: 0px;
+		right: 10px;
+	}
+	.product ul li b{
+		font-size:18px;
 	}
 	.diteils-img {
 		width:100%;
@@ -816,6 +822,7 @@ li:last-child{
  		font-size:16px;
  		width:100px;
  		padding: 20px;
+ 		text-align:center;
 	}
 	.text-row{
 		font-size:20px;
