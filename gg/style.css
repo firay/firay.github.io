@@ -764,7 +764,7 @@ h3 {
     top: 50px;
     font-size: 16px;
     width: 100px;
-    padding: 20px;
+    padding: 10px 5px;
     text-align: center;
   }
 
@@ -944,13 +944,13 @@ h3 {
   .nav-ul li:nth-child(5n) {
     position: absolute;
     margin-top: 35px;
-    margin-left: 120px;
+    margin-left: 115px;
   }
 
   .nav-ul li:last-child {
     position: absolute;
     margin-top: 35px;
-    margin-left: 170px;
+    margin-left: 175px;
   }
 
   .nav-brand span {
@@ -999,7 +999,6 @@ h3 {
 @media screen and (max-width: 420px) {
   .text-a a.features, .text-a a.download {
     top: 70px;
-    padding: 10px 5px;
   }
 }
 

@@ -713,7 +713,7 @@ li:last-child{
  		top: 50px;
  		font-size:16px;
  		width:100px;
- 		padding: 20px;
+ 		padding: 10px 5px;
  		text-align:center;
 	}
 	.text-a a.download{
@@ -863,12 +863,12 @@ li:last-child{
 	.nav-ul li:nth-child(5n){
 		position: absolute;
 		margin-top:35px;
-		margin-left:120px;
+		margin-left:115px;
 	}
 	.nav-ul li:last-child{
 		position: absolute;
 		margin-top:35px;
-		margin-left: 170px;
+		margin-left: 175px;
 	}
 
 	.nav-brand span{
@@ -909,7 +909,6 @@ li:last-child{
 @media screen and (max-width:420px){
 	.text-a a.features, .text-a a.download{
  		top: 70px;
- 		padding: 10px 5px;
 	}
 }
 
