@@ -706,15 +706,21 @@ li:last-child{
 		text-align: center; 
 	}
 	.text-a{
-		margin-top:40px;
+		margin-top:20px;
 		width:100%;
 	}
-	.text-a a.features {
- 	right: 10px;
+	.text-a a.features, .text-a a.download{
+ 		top: 50px;
+ 		font-size:16px;
+ 		width:100px;
+ 		padding: 20px;
+ 		text-align:center;
 	}
-	.text-a a.download {
-    left: 10px;
-    width:150px;
+	.text-a a.download{
+		left: 20px;
+	}
+	a.features{
+		right: 20px;
 	}
 	.product ul{
 		width:44%;
@@ -814,13 +820,6 @@ li:last-child{
 	.sl-text{
 		height: 170px;
 	}
-	.text-a a.features, .text-a a.download{
- 		top: 70px;
- 		font-size:16px;
- 		width:100px;
- 		padding: 20px;
- 		text-align:center;
-	}
 	.text-row{
 		font-size:20px;
 		margin-top:10px;
@@ -864,13 +863,14 @@ li:last-child{
 	.nav-ul li:nth-child(5n){
 		position: absolute;
 		margin-top:35px;
-		margin-left:105px;
+		margin-left:120px;
 	}
 	.nav-ul li:last-child{
 		position: absolute;
 		margin-top:35px;
-		margin-left: 165px;
+		margin-left: 170px;
 	}
+
 	.nav-brand span{
 		display: none;
 	}
@@ -906,9 +906,9 @@ li:last-child{
     padding: 0px 5px;
 	}	
 }
-@media screen and (max-width:400px){
+@media screen and (max-width:420px){
 	.text-a a.features, .text-a a.download{
-		width: 100px;
+ 		top: 70px;
  		padding: 10px 5px;
 	}
 }
