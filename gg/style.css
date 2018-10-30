@@ -834,6 +834,11 @@ h3 {
     font-size: 14px;
   }
 }
+@media screen and(max-width: 679px){
+	.nav img {
+    width: 150%;
+	}
+}
 @media screen and (max-width: 552px) {
   .nav-ul {
     margin: 60px 0 0 0;
