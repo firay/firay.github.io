@@ -773,6 +773,11 @@ li:last-child{
 		font-size:14px;
 	} 	
 }
+@media screen and(max-width: 662px){
+	.nav img {
+		width:150%;
+	}
+}
 @media screen and(max-width: 552px){
 	.nav-ul {
 		margin:60px 0 0 0;
