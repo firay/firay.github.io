@@ -980,9 +980,6 @@ h3 {
   }
 
   .nav-a-pos a.features, .nav-a-pos a.download {
-    position: absolute;
-    font-size: 16px;
-    width: 100px;
     padding: 10px 5px;
     margin-top: 10px;
   }
@@ -1017,6 +1014,15 @@ h3 {
 @media screen and (max-width: 420px) {
   .text-a a.features, .text-a a.download {
     top: 67px;
+    padding: 8px 5px;
+  }
+
+  .text-a a.features {
+    right: 10px;
+  }
+
+  .text-a a.download {
+    left: 10px;
   }
 }
 
