@@ -102,17 +102,16 @@ ul {
 .nav-ul ul li {
   float: left;
 }
-.nav-ul li:hover .span-pos {
-  opacity: 1;
-}
 .nav-ul a {
   color: #fffefe;
   text-align: center;
-  padding: 5px 10px 5px 10px;
+  display: block;
+  padding: 5px;
   margin-left: 5px;
   text-decoration: none;
   position: relative;
   transition: 0.3s all;
+  margin-top: 0px;
 }
 .nav-ul a:hover {
   font-size: 19px;
@@ -916,39 +915,55 @@ h3 {
 @media screen and (max-width: 510px) {
   .nav-ul {
     width: 250px;
-    margin: 60px auto 0 auto;
-    height: 70px;
+    margin: 50px auto 0 auto;
+    height: 60px;
   }
 
   .nav-ul.nav-ul_fixed {
     width: 100%;
-    height: 60px;
+    height: 80px;
     font-size: 14px;
   }
+
   .nav-ul.nav-ul_fixed ul {
     width: 250px;
-    height: 60px;
-    overflow: hidden;
-  }
-  .nav-ul.nav-ul_fixed a {
-    margin-top: 0px;
+    margin: 0 auto;
   }
 
-  .tree {
+  .nav-ul li:nth-child(4n) {
     position: absolute;
     margin-top: 35px;
-    margin-left: 120px;
+    margin-left: 0px;
+  }
+
+  .nav-ul li:nth-child(5n) {
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 100px;
+  }
+
+  .nav-ul li:last-child {
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 160px;
+  }
+
+  .five, .three, .for {
+    position: absolute;
+    width: 100px;
+    margin-top: 35px;
+  }
+
+  .three {
+    margin-left: 0px;
   }
 
   .for {
-    position: absolute;
-    margin-top: 35px;
+    margin-left: 100px;
   }
 
   .five {
-    position: absolute;
-    margin-top: 35px;
-    margin-left: 60px;
+    margin-left: 150px;
   }
 }
 @media screen and (max-width: 510px) {
@@ -957,7 +972,7 @@ h3 {
   }
 
   .nav-wrap {
-    padding: 40px 10px 0 10px;
+    padding: 40px 5px 0 5px;
   }
 
   .nav-a-pos a.features, .nav-a-pos a.download {
