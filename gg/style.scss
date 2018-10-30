@@ -445,9 +445,9 @@ h3{
 .text-row{
 	margin: 40px 0 0 20px;
 	color: $white;
-	font-size:$fz+10;
   	b,p{
 		display: inline-block;
+		font-size:2em;
 	}
 	p{
 		padding-left:20px;
@@ -739,7 +739,7 @@ li:last-child{
 			font-size: 16px;
 			padding: 5px ;
 		}
-}
+	}
 .nav-text p{
 	display: none;
 }
@@ -747,6 +747,18 @@ li:last-child{
 	max-width: 100%;
 	margin-top:0px;
 	width: 100%;
+}
+.sl-text{
+	height: 150px;
+	}
+.text-a a.features, .text-a a.download{
+ 		top: 88px;
+	}
+.text-row{
+  	b,p{
+		display: inline-block;
+		font-size:1em;
+	}
 }
 .ceo-part,.disign-part{
 	padding-top:10px;
@@ -868,7 +880,7 @@ li:last-child{
 	.nav-ul li:last-child{
 		position: absolute;
 		margin-top:35px;
-		margin-left: 175px;
+		margin-left: 180px;
 	}
 
 	.nav-brand span{
