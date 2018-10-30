@@ -623,15 +623,19 @@ h3 {
 }
 .contact-wrap ul {
   position: relative;
-  margin-top: 20px;
+  margin: 20px 0 0 0.5%;
   color: #999999;
-  width: 33.333%;
+  width: 31%;
   float: left;
   overflow: hidden;
   transition: 0.3s all;
+  font-size: 14px;
 }
 .contact-wrap ul:hover {
   color: black;
+}
+.contact-wrap img {
+  height: 28px;
 }
 .contact-wrap li:first-child {
   padding-bottom: 15px;
@@ -971,6 +975,11 @@ h3 {
 
   .nav-info {
     margin-top: 5px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .nav-brand span {
+    display: none;
   }
 }
 

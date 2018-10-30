@@ -583,15 +583,19 @@ li:last-child{
 	overflow: hidden;
 	ul{
 		position: relative;
-		margin-top:20px;
+		margin:20px 0 0 0.5%;
 		color: $grey;
-		width:33.333%;
+		width:31%;
 		float: left;
 		overflow: hidden;
-		transition: 0.3s all; 
+		transition: 0.3s all;
+		font-size:14px; 
 	}
 	ul:hover{
 		color: black;
+	}
+	img{
+		height: 28px;
 	}
 		li:first-child{
 			padding-bottom: 15px;
@@ -890,7 +894,11 @@ li:last-child{
 		margin-top:5px;
 	}	
 }
-
+@media screen and(max-width: 330px){
+	.nav-brand span{
+		display: none;
+	}
+}
 
 
 
