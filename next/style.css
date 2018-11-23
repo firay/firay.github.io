@@ -133,7 +133,7 @@ header {
 
 .about-wrap {
   box-shadow: 0 0 20px rgba(186, 0, 247, 0.9);
-  max-width: 80%;
+  width: 80%;
   margin: 0px auto 0 auto;
   margin-top: 25px;
 }
@@ -228,7 +228,7 @@ header {
 }
 
 .menu-gelary {
-  width: 60%;
+  flex-basis: 60%;
   box-shadow: 0 0 20px rgba(186, 0, 247, 0.9);
   overflow: hidden;
   justify-content: center;
@@ -251,7 +251,7 @@ header {
 }
 
 .gaming-wrap {
-  max-width: 80%;
+  width: 80%;
   margin: 0px auto 0 auto;
   box-shadow: 0 0 20px rgba(186, 0, 247, 0.9);
 }
@@ -278,26 +278,36 @@ header {
 }
 
 .kal9n {
-  margin-top: 20px;
-  background-color: #1d1b1b;
-}
-
-.kal9n-wrap {
-  display: flex;
-  align-items: center;
-}
-
-.kal9n-text, .kal9n-img {
-  flex-basis: 50%;
-  text-align: left;
-  padding: 10px;
-  transition: 0.3s all;
-}
-
-.kal9n-img-item {
-  width: 50%;
-  float: left;
   overflow: hidden;
+}
+
+.kal9n-pos {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.kal9n-slog {
+  margin-top: 10px;
+  font-size: 1.4em;
+  color: #5d03ab;
+  text-align: center;
+  font-family: 'Cormorant Infant', serif;
+}
+
+.standart-wrap {
+  border-radius: 10px;
+  height: 450px;
+  padding: 10px;
+  width: 80%;
+  margin: 5% auto 5% auto;
+  transition: 0.3s all;
+  box-shadow: 0 0 20px rgba(186, 0, 247, 0.9);
+}
+.standart-wrap span {
+  padding-left: 25px;
 }
 
 .kal9n-firs {
@@ -317,20 +327,35 @@ header {
   font-family: 'Cormorant Infant', serif;
 }
 
-.standart-wrap {
-  border-radius: 10px;
-  padding: 10px;
-  width: 90%;
-  margin: 10px auto 0 auto;
-  transition: 0.3s all;
-  box-shadow: 0 0 20px rgba(186, 0, 247, 0.9);
-}
-.standart-wrap span {
-  padding-left: 25px;
+.standart-wrap:hover {
+  padding: 10px 20px;
 }
 
-.standart-wrap:hover {
-  padding: 20px;
+.kal9n-standart {
+  position: relative;
+  flex: 1;
+  order: 1;
+  margin-right: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.kal9n-premium {
+  position: relative;
+  flex: 1;
+  order: 1;
+}
+
+.kal9n-img {
+  order: 2;
+  flex: 2;
+}
+
+.kal9n-img-item {
+  width: 50%;
+  float: left;
+  overflow: hidden;
 }
 
 .paty {
@@ -338,7 +363,7 @@ header {
 }
 
 .paty-wrap {
-  max-width: 80%;
+  width: 80%;
   margin: 0px auto 0 auto;
   box-shadow: 0 0 20px rgba(186, 0, 247, 0.9);
   overflow: hidden;
@@ -358,7 +383,7 @@ header {
 .paty-text ul {
   padding-top: 10px;
   height: 160px;
-  width: 700px;
+  width: 70%;
   margin: 0 auto;
 }
 .paty-text li {
@@ -388,7 +413,7 @@ footer {
 
 .footer-wrap {
   position: relative;
-  max-width: 80%;
+  width: 80%;
   margin: 0px auto 0 auto;
   display: flex;
   padding-top: 10px;
@@ -419,6 +444,123 @@ footer {
 .footer-icon img {
   width: 100%;
   border-radius: 40px;
+}
+
+@media screen and (max-width: 1440px) {
+  .kal9n-pos {
+    display: block;
+  }
+
+  .kal9n-standart, .kal9n-premium {
+    width: 50%;
+    float: left;
+    margin-right: 0px;
+    overflow: hidden;
+  }
+
+  .standart-wrap {
+    height: auto;
+  }
+
+  .kal9n-img {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .kal9n-text {
+    flex-basis: 40%;
+  }
+
+  .kal9n-img {
+    flex-basis: 60%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .about-wrap {
+    width: 90%;
+  }
+
+  .about-row {
+    flex-direction: column;
+  }
+
+  .about-img {
+    display: none;
+  }
+
+  .standart-wrap {
+    width: 90%;
+    height: 450px;
+    padding: 10px 5px;
+  }
+
+  .standart-wrap:hover {
+    padding: 10px 8px;
+  }
+
+  .gaming-wrap {
+    width: 90%;
+  }
+
+  .footer-wrap {
+    width: 100%;
+    align-items: center;
+  }
+
+  .footer-text {
+    flex-basis: 50%;
+  }
+
+  .footer-slog {
+    display: none;
+  }
+
+  .footer-icon {
+    flex-basis: 20%;
+  }
+  .footer-icon a {
+    height: auto;
+  }
+
+  .footer-icon p {
+    display: none;
+  }
+}
+@media screen and (max-width: 623px) {
+  .menu-wrap {
+    flex-direction: column;
+  }
+
+  .menu-gelary {
+    width: 80%;
+  }
+
+  .kal9n-standart, .kal9n-premium {
+    width: 100%;
+    float: left;
+  }
+
+  .standart-wrap {
+    height: auto;
+  }
+}
+@media screen and (max-width: 503px) {
+  .paty-wrap {
+    width: 90%;
+  }
+
+  .paty-text ul {
+    width: 100%;
+    height: auto;
+  }
+
+  .paty-text ul li {
+    height: auto;
+    padding: 5px 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
