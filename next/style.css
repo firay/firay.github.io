@@ -557,6 +557,7 @@ footer {
   }
 
   .nav {
+    display: none;
     margin-top: 20px;
     width: 50%;
     float: left;
