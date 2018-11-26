@@ -608,7 +608,7 @@ footer {
     padding: 5px 0;
   }
 }
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 340px) {
   .main {
     height: 290px;
     background-size: 120%;
@@ -622,8 +622,9 @@ footer {
     display: none;
   }
 
-  .paty-text ul {
-    width: 300px;
+  .paty-text ul li:last-child {
+    text-align: justify;
+    padding-left: 2px;
   }
 }
 
