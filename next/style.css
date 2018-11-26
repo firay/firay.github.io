@@ -621,6 +621,10 @@ footer {
   .kal9n-firs {
     display: none;
   }
+
+  .paty-text ul {
+    width: 300px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
