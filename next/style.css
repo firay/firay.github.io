@@ -505,6 +505,10 @@ footer {
     height: 44px;
     width: 44px;
   }
+
+  .paty-text ul {
+    height: 230px;
+  }
 }
 @media screen and (max-width: 769px) {
   .about-wrap {
