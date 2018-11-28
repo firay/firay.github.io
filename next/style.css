@@ -402,17 +402,19 @@ header {
   text-shadow: 0 0 10px #720bc7;
 }
 .paty-text ul {
+  overflow: hidden;
   padding-top: 10px;
-  height: 160px;
   width: 70%;
+  height: 215px;
   margin: 0 auto;
 }
 .paty-text li {
+  padding: 5px 0;
   transition: 0.3s all;
-  height: 25px;
+  position: relative;
 }
 .paty-text li:hover {
-  font-size: 1.1em;
+  padding: 8px 0;
 }
 
 .paty-gelary {
@@ -445,15 +447,15 @@ footer {
 .footer-icon {
   display: flex;
   align-items: center;
+  padding-right: 10px;
   height: 68px;
-  overflow: hidden;
   border-radius: 10px;
   padding-bottom: 10px;
 }
 .footer-icon a {
   display: inline-block;
   background-color: #1d1b1b;
-  width: 64px;
+  width: 66px;
   border-radius: 40px;
   margin-left: 10px;
   height: 64px;
@@ -490,13 +492,18 @@ footer {
     width: 100%;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .kal9n-text {
     flex-basis: 40%;
   }
 
   .kal9n-img {
     flex-basis: 60%;
+  }
+
+  .footer-icon a {
+    height: 44px;
+    width: 44px;
   }
 }
 @media screen and (max-width: 769px) {
@@ -533,7 +540,7 @@ footer {
 
   .footer-icon a {
     height: 44px;
-    width: 51px;
+    width: 44px;
   }
 }
 @media screen and (max-width: 682px) {
@@ -581,18 +588,18 @@ footer {
 
   .footer-icon {
     margin-top: 5px;
-    flex-basis: 25%;
+    flex-basis: 30%;
   }
   .footer-icon p {
     display: none;
   }
 
-  .footer-icon a img {
-    height: 51px;
-    width: 51px;
+  .footer-icon a {
+    height: 41px;
+    width: 41px;
   }
 }
-@media screen and (max-width: 503px) {
+@media screen and (max-width: 520px) {
   .paty-wrap {
     width: 90%;
   }
@@ -602,13 +609,7 @@ footer {
   }
 
   .paty-text ul {
-    width: 100%;
-    height: auto;
-  }
-
-  .paty-text ul li {
-    height: auto;
-    padding: 5px 0;
+    height: 280px;
   }
 
   .footer-text {
@@ -617,15 +618,10 @@ footer {
 
   .footer-icon {
     margin-top: 5px;
-    flex-basis: 51%;
+    flex-basis: 30%;
   }
   .footer-icon p {
     display: none;
-  }
-
-  .footer-icon a {
-    height: 51px;
-    width: 51px;
   }
 }
 @media screen and (max-width: 340px) {
@@ -642,9 +638,16 @@ footer {
     display: none;
   }
 
-  .paty-text ul li:last-child {
-    text-align: justify;
-    padding-left: 2px;
+  .footer-icon {
+    margin-top: 5px;
+    flex-basis: 30%;
+  }
+  .footer-icon p {
+    display: none;
+  }
+  .footer-icon a {
+    height: 30px;
+    width: 30px;
   }
 }
 
