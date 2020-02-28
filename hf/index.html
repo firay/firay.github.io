@@ -4,21 +4,37 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 </head>
 <body>
 	<header>
-		<nav>
+		<nav data-scroll-index='0' class="bs_scroll_menu" id="menu">
 			<div class="logo">
 				<img src="images/Logo копия.png" alt="">
 			</div>
 			<ul>
-				<li><a href="#">Features</a></li>
-				<li><a href="#">Pricing </a></li>
-				<li><a href="#">Blog </a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">Login</a></li>
+				<li><a href="0" class="nav_active">Home</a></li>
+				<li><a href="1">Analytics </a></li>
+				<li><a href="2">About me </a></li>
+				<li><a href="3">Last sample</a></li>
+				<li><div class="tt"><a href="#"data-modal="#modal" class="modal__trigger">LogIn</div></a></li>
 			</ul>
 		</nav>
+		<div id="modal" class="modal modal__bg" role="dialog" aria-hidden="true">
+			<div class="modal__dialog">
+				<div class="modal__content">
+					<div class="login">
+						<input type="name" value="Login">
+						<input type="password" value="password">
+					</div>
+				<!-- modal close button -->
+					<a href="" class="modal__close demo-close">
+						<img src="images/Graph..png" alt="">
+					</a>	
+				</div>
+			</div>
+		</div>
 	</header>
 	<div class="content">
 		<div class="marcury">
@@ -32,10 +48,7 @@
 				<img src="images/Merkury - Home kopia.png" alt="">
 			</div>
 		</div>
-	<div class="white">
-		
-	</div>
-	<div class="analitix">
+	<div class="analitix" data-scroll-index='1'>
 		<div class="analitix_wrap">
 			<ul>
 				<li><img src="images/Graph3..png" alt=""></li>
@@ -77,8 +90,10 @@
 			<img src="images/Grupa 2.png" alt="">
 		</div>
  	</div> 
-</div>
-	<div class="gelary">
+	<div class="gelary" data-scroll-index='2'>
+		<div class="gelary_info">	
+				<h2>Some information about me, and some example of my job that i can do  c:</h2>
+		</div>
 		<div class="gelary_wrap">
 			<div class="gelary_item">
 				<div class="gelary_img">
@@ -86,7 +101,7 @@
 				</div>
 				<div class="gelary_text">
 					<div class="position_button">
-						<button>Lorem ipsum</button>
+						<button data-modal="#modal2" class="modal__trigger">litel animation</button>
 					</div>
 				</div>
 			</div>
@@ -96,55 +111,1677 @@
 				</div>
 				<div class="gelary_text">
 					<div class="position_button">
-						<button>Lorem ipsum</button>
-					</div>
-				</div>
-			</div>
-			<div class="gelary_item">
-				<div class="gelary_img">
-					<img src="images/unnamed.jpg" alt="">
-				</div>
-				<div class="gelary_text">
-					<div class="position_button">
-						<button>Lorem ipsum</button>
-					</div>
-				</div>
-			</div>
-			<div class="gelary_item">
-				<div class="gelary_img">
-					<img src="images/unnamed.jpg" alt="">
-				</div>
-				<div class="gelary_text">
-					<div class="position_button">
-						<button>Lorem ipsum</button>
-					</div>
-				</div>
-			</div>
-			<div class="gelary_item">
-				<div class="gelary_img">
-					<img src="images/unnamed.jpg" alt="">
-				</div>
-				<div class="gelary_text">
-					<div class="position_button">
-						<button>Lorem ipsum</button>
-					</div>
-				</div>
-			</div>
-			<div class="gelary_item">
-				<div class="gelary_img">
-					<img src="images/unnamed.jpg" alt="">
-				</div>
-				<div class="gelary_text">
-					<div class="position_button">
-						<button>Lorem ipsum</button>
+						<button data-modal="#modal3" class="modal__trigger">Some word about me</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="connect">
-			
+		<div class="more_info">
+			<p>Также не большая страница примера интернет магазина ниже.(Почитайте карточки там ного интересного)</p>
+		</div>	
+	</div>
+	<div id="modal2" class="modal modal--align-top modal__bg" role="dialog" aria-hidden="true">
+		<div class="modal__dialog">
+			<div class="modal__content">
+				<div class="some_animation">
+					<ul>
+						<li><a href=""> Lorem ipsum dolor sit amet.</a></li>
+						<li><a href="">Lorem ipsum dolor.</a></li>
+						<li><a href="">Lorem ipsum dolor.</a></li>
+						<li><a href="">Lorem ipsum dolor sit.</a></li>
+						<li><a href="">Lorem ipsum dolor sit.</a></li>
+					</ul>
+					<div class="nice_move">	
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<div class="try_wrap">
+				hover circle me, hover me ^_^!
+				<div class="try">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>	
+					</div>
+				</div>		
+			<a href="" class="modal__close demo-close">
+				<img src="images/Graph..png" alt="">
+			</a>
+			</div>
 		</div>
 	</div>
+	<div id="modal3" class="modal modal__bg" role="dialog" aria-hidden="true">
+		<div class="modal__dialog">
+			<div class="modal__content">
+			<div class="about_me">
+				<span>
+					Несколько слов про себя.
+				</span>
+				<p>
+					<span class="about_p" >В</span> этой не большой статье я буду писать только правду. Если вы открыли это окно и вам действительно интересно кто я есть, почему хочу работать в ИТ, подхожу я вам или нет то вы узнаете много.
+				</p>
+				<p>
+					<span class="about_p" >Ну</span> с вступительной речью закончили, начнем. Технологии, которыми я владею на данный момент. 
+				</p>
+				<ul>
+					<li><b>HTML</b> - чувствую себя в нем уверено если оценивать трезво думаю тут мои знания 4 из 5</li>
+					<li><b>СSS</b> - хорошо понимаю, очень комфортно с ним работать, есть опыт работы с анимацияи, думаю тут где-то 4</li>
+					<li><b>SASS</b> использую в работе приложения Коala. Создавать свои переменные и заготовки не вызывает у меня проблем, плюс очень ускоряет работу.</li>
+					<li><b>JavaScript/jQuery</b> тут сложнее, я не пишу сам скрипты, раз мы тут уже честно ведем беседу. Но я хорошо пользуюсь интернатом, я нахожу нужные мне скрипты и понимаю, как они работают, и что мне нужно убрать или добавить, чтобы этот скрип удовлетворял моим потребностям.</li>
+					<li><b>Wordpress</b> - особо с ним не сталкивался, есть только опыт натяжки уже своей готовой верстки на Wordpress.
+					</li>
+					<li><b>Bootstrap</b> - работал с ним, особо в изучения не вникал, но если будет нужно, что-то написать с помощью Bootstrap, я смогу.
+					</li>
+					 <li>Адаптивная, валидная, кросс - браузерная верстка, соблюдения стандартов W3C, сохранения дизайна при адаптации на мобильные устройства. </li>	
+				</ul>
+				<p>Теперь немного про себя и личностные качества, это поможет лучше раскрыть меня и понять, почему я могу быть для вас полезен как сотрудник.</p>
+				<ul>
+					<li><b>Я очень трудолюбивый человек</b>, я привык работать больше 8 часов в день, я сдавал проекты, я понимаю, что такое дед-лайн и как важно все делать вовремя и сразу.</li>
+					<li><b>Я очень быстро учусь</b>, я приходил обычным чертежником, в компанию не понимая в архитектурных чертежах и геометрии, но было желания и понимания, что проект нужно сдать. Мы его сдали за 4 дня раньше дед-лайна. Спустя 3 недели я спокойно чертил и чувствовал себя уверено</li>
+					<li>На всех своих работах я добивался определенных успехов, <b>я привык делать свою работу хорошо и выдавать качественный продукт</b>. </li>
+					<li>Я не иду в Ит ради денег, или потому, что это престижно я просто кайфую от того что делаю, мне <b>действительно нравиться кодить</b>, работать над проектом получать хороший результат.</li>
+					<li><b>Я готов работать за не большие деньги, готов работать много, готов много учится, готов ходить на разные курсы, готов платить за свои курсы и это все не пустые слова</b>. Вы это поймете, как только познакомитесь со мной. </li>
+					<li>Если вы дадите мне возможность у вас работать, даже если  я не буду дотягивать по каким-то техническим требованиям,  я сделаю все, чтобы уже спустя месяц, <b>я превосходил ваши ожидания</b>.</li>
+				</ul>
+				<p><b>Пожалуста,</b> не думайте, что я с завышеной самооценкой, я просто ищу место где смогу работать, учиться и быть полезным для компании.
+				</p>
+			</div>
+				<!-- modal close button -->
+				<a href="" class="modal__close demo-close">
+				</a>
+			</div>
+		</div>
+	</div>	
+	</div><!--gelary-->
+<div class="shop_part" data-scroll-index='3'>
+	<div class="shop_header">
+		<div class="shop_logo">
+			<img src="images/Logo копия.png" alt="">
+		</div>
+		<div class="shop_catalog">
+			<span><img src="images/" alt=""></span>
+			<a href="">Каталог Товаров</a>
+		</div>
+		<div class="shop_serch">
+			<input type="serch" name="sech" placeholder="Я Ищу..."><button>найти</button>
+		</div>
+		<div class="shop_icon">
+			<ul>
+				<li><i><img src="images/shop.png" alt=""></i></li>
+				<li><i><img src="images/izbranno.png" alt=""></i></li>
+				<li><i><img src="images/icon.png" alt=""></i></li>
+			</ul>
+		</div>	
+	</div>	
+<div class="shop_content" >
+	<div class="shop_info">
+		<ul class="main_category category">
+			<li>Категории</li>
+			<li class=" note"><a href="#">Ноутбуки и компьютеры<span></span></a>
+				<div class="sub_category" id="for_note">
+					<div class="deteil_for_pc">
+						<p>Популярный выбор</p>
+						<ul>
+							<li><a href="">Ноутбуки</a></li>
+							<li><a href="">Asus</a></li>
+							<li><a href="">Dell</a></li>
+							<li><a href="">HP</a></li>
+							<li><a href="">Lenovo</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Аксесуары для Ноутбуков и Пк</a></li>
+							<li><a href="">Флеш память USB</a></li>
+							<li><a href="">Сумки и рюкзаки для ноутбуков</a></li>
+							<li><a href="">Веб-камеры</a></li>
+							<li><a href="">Универсальные мобильные батареи</a></li>
+						</ul>	
+						<ul>
+							<li><a href="">Планшеты</a></li>
+							<li><a href="">Аксесуары к Планшетам</a><li>
+							<li><a href="">Чехлы и клавиатуры для планшетов</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Электронные книги</a></li>
+							<li><a href="">Аксесуаы для Электронных книг</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Уцененные товары</a></li>
+						</ul>
+					</div>
+					<div class="deteil_for_pc">
+						<ul>
+							<li><a href="">Комплектующие</a></li>
+							<li><a href="">Видеокарты</a></li>
+							<li><a href="">Жесткие диски</a></li>
+							<li><a href="">Процессоры</a></li>
+							<li><a href="">SSD</a></li>
+							<li><a href="">Материнская платы</a></li>
+							<li><a href="">Блоки питания</a></li>
+							<li><a href="">Корпуса</a></li>
+							<li><a href="">Источники бесперебойного питания</a></li>
+							<li><a href="">Системы охлаждения</a></li>
+							<li><a href="">Стабилизаторы напряжения</a></li>
+							<li><a href="">Звуковые карты</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Компьютеры</a></li>
+							<li><a href="">Мониторы</a></li>
+							<li><a href="">Мыши</a></li>
+							<li><a href="">Клавиатуры</a></li>
+							<li><a href="">Графичиские планшеты</a></li>
+							<li><a href="">Cетевые Хранилища</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Серверное оборудования</a></li>
+						</ul>
+					</div>
+					<div class="deteil_for_pc">
+						<ul>
+							<li><a href="">Оргтехника</a></li>
+							<li><a href="">МФУ/Принтеры</a></li>
+							<li><a href="">Телефонные апараты</a></li>
+							<li><a href="">Ориигинальные расходные материалы</a></li>
+							<li><a href="">Проекторы</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Программное Обеспечения</a></li>
+							<li><a href="">Операцианые системы</a></li>
+							<li><a href="">Офисные Приложеия</a></li>
+							<li><a href="">Антивирусы</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Товары для геймиров</a></li>
+							<li><a href="">Игровые консоли и приставки</a></li>
+							<li><a href="">Джойстики и аксессуары</a></li>
+							<li><a href="">Игры</a></li>
+							<li><a href="">Игровые поверхности</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Cетеве оборудования</a></li>
+							<li><a href="">Пач-корды</a></li>
+							<li><a href="">Маршрутизаторы</a></li>
+							<li><a href="">ІР-камеры</a></li>
+							<li><a href="">Коммутаторы</a></li>
+							<li><a href="">Беспроводные точки</a></li>
+						</ul>
+					</div>
+				</div>
+			</li>	
+			<li class="phone_show"><a href="#">Телефоны ТВ и электроника <span></span></a>
+			<div class="sub_category" id="for_phone">
+					<div class="sub_phone_show">
+						<ul>
+							<li><a href="">Телефоны</a></li>
+							<li><a href="">Смартфоны</a></li>
+							<li><a href="">Кнопочные телефоны</a></li>
+							<li><a href="">Офисные телефоны</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Аксесуары для мобильных телефонов</a></li>
+							<li><a href="">Универсальные мобильные батареии</a></li>
+							<li><a href="">Чехлы для мобильных телефонов</a></li>
+							<li><a href="">Защитные стекла и пленка</a></li>
+							<li><a href="">Гарнитуры</a></li>
+							<li><a href="">Держатели</a></li>
+							<li><a href="">Мобильная связь и Интернет</a></li>
+							<li><a href="">Гарнитуры Bluetoth</a></li>
+						</ul>	
+						<ul>
+							<li><a href="">Телевизоры и аксесуары</a></li>
+							<li><a href="">Телевизоры</a><li>
+							<li><a href="">Подставки, крепления для тв</a></li>
+							<li><a href="">Кабели и переходники</a></li>
+							<li><a href="">Тв-антены</a></li>
+							<li><a href="">Аксесуары для Тв</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Уцененные товары</a></li>
+						</ul>
+					</div>
+					<div class="sub_phone_show">
+						<ul>
+							<li><a href="">Фото и видео</a></li>
+							<li><a href="">Фотоапараты</a></li>
+							<li><a href="">Ведеоапараты</a></li>
+							<li><a href="">Экшен-камеры и аксессуары</a></li>
+							<li><a href="">Акамуляторы и батарейки</a></li>
+							<li><a href="">Студийное оборудования</a></li>
+							<li><a href="">Сумки и чехлы</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Аудио и домашние кинотеатры</a></li>
+							<li><a href="">Проектры</a></li>
+							<li><a href="">DVD/HD-медиаплееры</a></li>
+							<li><a href="">Музыкальные центры</a></li>
+							<li><a href="">домашние кинотеатры</a></li>
+							<li><a href="">Активные акустичиские системы</a></li>
+							<li><a href="">Экраны</a></li>
+							<li><a href="">Акустика HI-FI</a></li>
+							<li><a href="">AV-ресиверы</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Услуги</a></li>
+						</ul>
+					</div>
+					<div class="sub_phone_show">
+						<ul>
+							<li><a href="">Портативная электроника</a></li>
+							<li><a href="">Планшенты</a></li>
+							<li><a href="">Наушники</a></li>
+							<li><a href="">Электронные книги</a></li>
+							<li><a href="">Смарт_часы</a></li>
+							<li><a href="">Фитнес-браслеты</a></li>
+							<li><a href="">MP3-плееры</a></li>
+							<li><a href="">Диктофоны</a></li>
+							<li><a href="">Спортивные часы</a></li>
+							<li><a href="">Аксесуары для планшетов</a></li>
+							<li><a href="">Велокомпьютеры</a></li>
+							<li><a href="">Портативная акустика</a></li>
+							<li><a href="">Внешние жосткие диски</a></li>
+							<li><a href="">Гаджеты и подарки</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Автоэлектроника</a></li>
+							<li><a href="">Видеорегистраторы</a></li>
+							<li><a href="">GPS-навигаторы</a></li>
+							<li><a href="">Автозвук</a></li>
+							<li><a href="">Авто сигнализации</a></li>
+						</ul>
+					</div>
+				</div>				
+			</li>
+			<li class="аppliances"><a href="#">Бытовая Техника <span></span></a>
+				<div class="sub_category" id="for_аppliances">
+					<div class="sub_phone_show">
+						<ul>
+							<li><a href="">Крупна бытовая техника</a></li>
+							<li><a href="">Стиральные машины</a></li>
+							<li><a href="">Холодильники</a></li>
+							<li><a href="">Морозильные камеры</a></li>
+							<li><a href="">Плиты</a></li>
+							<li><a href="">Посудомойные машины</a></li>
+							<li><a href="">Сушильные автоматы</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Встраиваемая техника</a></li>
+							<li><a href="">УВарочные поверхности</a></li>
+							<li><a href="">Духовые шкафы</a></li>
+							<li><a href="">Вытяжки</a></li>
+							<li><a href="">Готовые компоненты</a></li>
+						</ul>	
+						<ul>
+							<li><a href="">Климатическая техника</a></li>
+							<li><a href="">Обогреватели</a><li>
+							<li><a href="">Бойлеры</a></li>
+							<li><a href="">Увлажнительные воздуха</a></li>
+							<li><a href="">Котлы газовые</a></li>
+							<li><a href="">Котлы электричиские</a></li>
+							<li><a href="">Котлы твердотопливные</a></li>
+							<li><a href="">Водонагреватели (проточные)</a></li>
+							<li><a href="">Очистители воздуха</a></li>
+							<li><a href="">Климатичиские комплексы</a></li>
+							<li><a href="">Осушители воздуха</a></li>
+							<li><a href="">Кондиционеры</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Уцененные товары</a></li>
+						</ul>
+					</div>
+					<div class="sub_phone_show">
+						<ul>
+							<li><a href="">Кухня</a></li>
+							<li><a href="">Мультиварки</a></li>
+							<li><a href="">Микроволновые печи</a></li>
+							<li><a href="">Кофеварки</a></li>
+							<li><a href="">Блендеры</a></li>
+							<li><a href="">Электрочайники</a></li>
+							<li><a href="">Мясорубки</a></li>
+							<li><a href="">Соковыжималки</a></li>
+							<li><a href="">Кухойные комбайны</a></li>
+							<li><a href="">Бутербродницы и вафельницы</a></li>
+							<li><a href="">Хлебопечки</a></li>
+							<li><a href="">Миксеры</a></li>
+							<li><a href="">Тостеры</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Сантехника и ванная комната</a></li>
+							<li><a href="">Бойлеры</a></li>
+							<li><a href="">Смесители</a></li>
+							<li><a href="">Ванны</a></li>
+							<li><a href="">Кухойные мойки</a></li>
+							<li><a href="">Унитазы</a></li>
+							<li><a href="">Душевые гарнитуры</a></li>
+						</ul>
+					</div>
+					<div class="sub_phone_show">
+						<ul>
+							<li><a href="">Уход и уборка</a></li>
+							<li><a href="">Пылесосы</a></li>
+							<li><a href="">Роботы-пылесосы</a></li>
+							<li><a href="">Швейная техника и аксессуары</a></li>
+							<li><a href="">Швейная техника</a></li>
+							<li><a href="">Утюги и гладильные системы</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Бытовая техника</a></li>
+							<li><a href="">Средства для стирки</a></li>
+							<li><a href="">Средства для мытья посуды</a></li>
+							<li><a href="">Средства для уборки</a></li>
+							<li><a href="">Средства по уходу за техникой</a></li>
+							<li><a href="">Для красоты и здоровья</a></li>
+							<li><a href="">Машинки и тримерры</a></li>
+							<li><a href="">Приборы для укладки волос</a></li>
+							<li><a href="">Эпиляторы</a></li>
+							<li><a href="">Фотоэпиляторы</a></li>
+							<li><a href="">Электробритвы для мужчин</a></li>
+							<li><a href="">Фены</a></li>
+							<li><a href="">Тонометры</a></li>
+							<li><a href="">Зубные щетки</a></li>
+							<li><a href="">Весы напольные</a></li>
+							<li><a href="">Ингаляторы</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Фильтры для воды</a></li>
+						</ul>
+					</div>
+				</div>	
+			</li>
+			<li class="home"><a href="#">Товары для дома <span></span></a>
+				<div class="sub_category" id="for_home">
+					<div class="sub_home_show">
+						<ul>
+							<li><a href="">Декор для дома</a></li>
+							<li><a href="">Мебель</a></li>
+							<li><a href="">Кресла</a></li>
+							<li><a href="">Компьютерные столы</a></li>
+							<li><a href="">Эгономика рабочого места</a></li>
+							<li><a href="">Стулья и табуреты</a></li>
+							<li><a href="">Бескаркасная мебель</a></li>
+							<li><a href="">Садовая мебель</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Домашний текстиль</a></li>
+							<li><a href="">Постельное белье</a></li>
+							<li><a href="">Матрасы</a></li>
+							<li><a href="">Одеяла</a></li>
+							<li><a href="">Подушки</a></li>
+							<li><a href="">Наматрасники и подматрасники</a></li>
+							<li><a href="">Пледы</a></li>
+							<li><a href="">Полотенца</a></li>
+							<li><a href="">Покрывала</a></li>
+							<li><a href="">Пледы</a></li>
+						</ul>	
+						<ul>
+							<li><a href="">Системы озраны и безопасности</a></li>
+							<li><a href="">Комплекты видеоаблюдения</a><li>
+							<li><a href="">Комплекты сигнализаций</a></li>
+							<li><a href="">Видеодомофоны</a></li>
+							<li><a href="">Стабилезаторы напряжения</a></li>
+							<li><a href="">Инвенторы</a></li>
+						<ul>
+							<li><a href="">Уцененные товары</a></li>
+						</ul>
+					</div>
+					<div class="sub_home_show">
+						<ul>
+							<li><a href="">Освещение</a></li>
+							<li><a href="">Лампочки</a></li>
+							<li><a href="">Настольные лампы</a></li>
+							<li><a href="">Люстры</a></li>
+							<li><a href="">Уличное освищения</a></li>
+							<li><a href="">Настенные светильники</a></li>
+							<li><a href="">Потолочные светильники</a></li>
+							<li><a href="">Светодиодные гирлянды</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Счеетчики</a></li>
+							<li><a href="">Защита от перепадов напряжения</a></li>
+							<li><a href="">Счетчики воды</a></li>
+							<li><a href="">Счетчики газа</a></li>
+							<li><a href="">Счетчики электроенергии</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Часы</a></li>
+							<li><a href="">Настенные часы</a></li>
+							<li><a href="">Настольные часы</a></li>
+							<li><a href="">Напольные часы</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Ковры</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Товары для животных</a></li>
+							<li><a href="">Корма</a></li>
+							<li><a href="">Наполнители для туалетов</a></li>
+						</ul>
+					</div>
+					<div class="sub_home_show">
+						<ul>
+							<li><a href="">Посуда</a></li>
+							<li><a href="">Для приготовления пищи</a></li>
+							<li><a href="">Посуда для сервировки</a></li>
+							<li><a href="">Кухонные аксессуары</a></li>
+							<li><a href="">Кухонные ножи</a></li>
+							<li><a href="">Хренения и упаковка</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Инвернтарь для дома и офиса</a></li>
+							<li><a href="">Стирка и глажка</a></li>
+							<li><a href="">Ведра и корзины</a></li>
+							<li><a href="">Хозяйственные товары</a></li>
+							<li><a href="">Лестницы</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Хозяйственные товары</a></li>
+							<li class="li"><a href="">Пакеты для мусора</a></li>
+							<li class="li"><a href="">Перчатки</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Бытовая химия</a></li>
+							<li class="li"><a href="">Средства для стирки</a></li>
+							<li class="li"><a href="">Средства для мытья посуды</a></li>
+							<li><a href="">Средства для уборки</a></li>
+						</ul>
+					</div>
+				</div>	
+			</li>
+			<li class="plumbing"><a href="#">Сантехника<span></span></a>
+				<div class="sub_category" id="for_plumbing">
+					<div class="sub_plumbing_show">
+						<ul>
+							<li><a href="">По аналогии с другими категориями</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem.</a></li>
+						</ul>	
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a><li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+					</div>
+					<div class="sub_plumbing_show">
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+					<div class="sub_plumbing_show">
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor sit.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+				</div>	
+			</li>
+			<li class="others"><a href="#">Ремонт <span></span></a>
+				<div class="sub_category" id="for_others">
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">По аналогии с другими категориями</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem.</a></li>
+						</ul>	
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a><li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor sit.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+				</div>	
+			</li>
+			<li class="others"><a href="#">Сантехника<span></span></a>
+				<div class="sub_category" id="for_others">
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">По аналогии с другими категориями</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem.</a></li>
+						</ul>	
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a><li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor sit.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+				</div>	
+			</li>
+			<li class="others"><a href="#">Сад/Огород <span></span></a>
+				<div class="sub_category" id="for_others">
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">По аналогии с другими категориями</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem.</a></li>
+						</ul>	
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a><li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor sit.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+				</div>	
+			</li>
+			<li class="others"><a href="#">Книги <span></span></a>
+				<div class="sub_category" id="for_others">
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">По аналогии с другими категориями</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem.</a></li>
+						</ul>	
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a><li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor sit.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+				</div>	
+			</li>
+			<li class="others"><a href="#">Красота и здоровья <span></span></a>
+				<div class="sub_category" id="for_others">
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">По аналогии с другими категориями</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem.</a></li>
+						</ul>	
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a><li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor sit.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+				</div>	
+			</li>
+			<li class="others"><a href="#">Спорт <span></span></a>
+				<div class="sub_category" id="for_others">
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">По аналогии с другими категориями</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem.</a></li>
+						</ul>	
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a><li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor sit.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+				</div>	
+			</li>
+			<li class="others"><a href="#">Одежда <span></span></a>
+				<div class="sub_category" id="for_others">
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">По аналогии с другими категориями</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem.</a></li>
+						</ul>	
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a><li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor sit.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+				</div>	
+			</li>
+			<li class="others"><a href="#">Автотовары <span></span></a>
+				<div class="sub_category" id="for_others">
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">По аналогии с другими категориями</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem.</a></li>
+						</ul>	
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a><li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+					<div class="sub_others_show">
+						<ul>
+							<li><a href="">Lorem</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li class="li"><a href="">Lorem</a></li>
+						</ul>
+						<ul>
+							<li><a href="">Lorem ipsum.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor sit.</a></li>
+							<li class="li"><a href="">Lorem ipsum dolor.</a></li>
+							<li><a href="">Lorem ipsum dolor sit.</a></li>
+						</ul>
+					</div>
+				</div>	
+			</li>
+		</ul>
+		<ul class="category info">
+			<li> Нужные чекбоксы</li>
+			<li><input type="checkbox" name="chek" id="1"> <label for="1"></label> Для чего-то</li>
+			<li><input type="checkbox" name="chek" id="2"> <label for="2"></label> Для чего-то</li>
+			<li><input type="checkbox" name="chek" id="3"> <label for="3"></label> Для чего-то</li>
+			<li><input type="checkbox" name="chek" id="4"> <label for="4"></label> Для чего-то</li>
+			<li><input type="checkbox" name="chek" id="5"> <label for="5"></label> Для чего-то</li>
+			<li> <button type="button"> Найти</button></li>
+		</ul>
+		<ul class="category shop_contact">
+			<li><a href="">Контакты</a></li>
+			<li><a href="">Электронная Почта:</a></li>
+			<li><a href="">maschenko2012@gmail.com</a></li>
+			<li><a href="">maschenko2012@gmail.com</a></li>
+			<li><a href=""> Номер Call-Центра:</a></li>
+			<li><a href="">+38066-947-25-47</a></li>
+			<li><a href=""> Вайбер, Телеграм </a></li>
+			<li><a href=""> Адрес: Киев , ул.Березняки 18б офис 322</a></li>
+		</ul>
+		<ul class="category about_us ">
+				<li><a href="">О нас</a></li>
+				<li><a href="">Лицензия</a></li>
+				<li><a href="">Вакансии</a></li>
+				<li><a href="">Контакты</a></li>
+		</ul>
+	</div>
+	<div class="shop_conten_center">
+		<div class="shop_slider">
+			<div class="slider">
+				<span>Немного слайдеров</span>
+					<p>Поставлю тут хорошие фильмы которые советовал бы посмотерть, если еще не смотрели. Видь, то что тут написано не так важно текстом. А так в любом случае вы проведете свое время нe зря.
+					</p>
+			<div class="sl">
+                <div class="sl-slide">
+                	<div class="slider_header">
+                		<div class="slider_name">
+                			Название: Зеленая Книга
+                		</div>
+                		<div class="slider_see">
+                			<a href="">Ccылка на фильм</a>
+                		</div>
+                	</div>
+                	<div class="slider_content">
+          				<img src="images/green_boock.jpg" alt="">
+          			</div>
+          				<div class="slider_footer">
+							<p>Отличный фильм, который показует атмосферу Америки рассовую несправидливость 70х годов.Юмор, хорошая игра актеров, интересный сюжет и великолепные дилоги, смотришь на одном дыхании. Просмотрев этот фильм один раз вы будете его советывать, захотите просмотреть со временем еще раз, чтобы вспомнить диалоги.<a href="">Cмотреть</a> </p>  
+          				</div>
+               	 	</div>	
+                	<div class="sl-slide">
+                		<div class="slider_header">
+                			<div class="slider_name">
+                				Название: Херлок Холмс Игра Теней
+                			</div>
+                			<div class="slider_see">
+                				<a href="">Ccылка на фильм</a>
+                			</div>
+                		</div>
+                		<div class="slider_content">
+          					<img src="images/sherlok.jpg" alt="">
+                		</div>
+                		<div class="slider_footer">
+								<p>Фильм который ты смотришь на одном дыхании. Игра актеров, сюжет, ну и диалоги на высочайшем уровне. Несколько раз смотрел этот фильм с огромным удовольствием. Отличный фильм, главное в этом фильме нечего не происходит просто так, следите за каждым кадром. <a href="">Cмотреть</a></p> 
+               	 		</div> 
+               	 	</div>	
+                	<div class="sl-slide">
+                		<div class="slider_header">
+                			<div class="slider_name">
+                				Название: Война Токов
+                			</div>
+                			<div class="slider_see">
+                				<a href="">Ccылка на фильм</a>
+                			</div>
+                		</div>
+                		<div class="slider_content">
+          					<img src="images/Tok.jpg" alt="">
+                		</div>
+                		<div class="slider_footer">
+							<p>Хороший фильм, который расскрывает немного с другой стороны историю появления электричества в нашем доме. На мой взгляд Никола Тесла сыграл в этом открытии роль немного значиеме чем указана в фильме. Но фильм шикарен.Все на вышшем уровне <a href="">Cмотреть</a></p> 
+               	 		</div> 
+               	 	</div>
+                	<div class="sl-slide">
+                		<div class="slider_header">
+                			<div class="slider_name">
+                				Название: Красный Воробей
+                			</div>
+                			<div class="slider_see">
+                				<a href="">Ccылка на фильм</a>
+                			</div>
+                		</div>
+                		<div class="slider_content">
+          					<img src="images/bird.jpg" alt="">
+                		</div>
+                		<div class="slider_footer">
+							<p>Cтранный фильм, зайдет не всем. Описывает сложную работу агента под прекрытиям со стороны ЦРУ. Сложный для восприятия и непонятный в начале. В фильме хороший сюжет который держит в напряжении, а главное фильм вызывает эмоции. С девушкой лучше не смотреть (пототм поймете почему).<a href="">Cмотреть</a></p> 
+               	 		</div> 
+               	 	</div>
+                	<div class="sl-slide">
+                		<div class="slider_header">
+                			<div class="slider_name">
+                				Название: Однажды в Голевуде
+                			</div>
+                			<div class="slider_see">
+                				<a href="">Ccылка на фильм</a>
+                			</div>
+                		</div>
+                		<div class="slider_content">
+          					<img src="images/Hollywood.jpg" alt="">
+                		</div>
+                		<div class="slider_footer">
+							<p>Отличный фильм, лекгий, смешной, расслабляет. Смотришь и не замечаешь время. Игра актеров это супер уровень, именно за эту роль Бред Пит получил оскар. Отличная классика Голивуда смотрите в любой компании - зайдет. <a href="">Cмотреть</a></p> 
+               	 		</div> 
+               	 	</div>
+                	<div class="sl-slide">
+                		<div class="slider_header">
+                			<div class="slider_name">
+                				Название: Достать Ножи
+                			</div>
+                			<div class="slider_see">
+                				<a href="">Ccылка на фильм</a>
+                			</div>
+                		</div>
+                		<div class="slider_content">
+          					<img src="images/knife.jpg" alt="">
+                		</div>
+                		<div class="slider_footer">
+							<p>Очень крутой сюжет, который держит тебя в напряжении целый фильм. Ты до конца не знаешь чем он закончится. Советовал бы посмотреть всем. Фильм шикарен, игра актеров достойная, хорошо раскрыты именно одиночные персонажи, что делает фильм еще интереснее <a href="">Cмотреть</a></p> 
+               	 		</div> 
+               	 	</div>	
+            	</div><!--sl-->
+        	</div><!--slide-->
+		</div>
+		<div class=" last_choise shop_gelary">
+			<span>Последние просмотреные товары</span>
+			<div class="shop_gelary_item">
+				<div class="gelare_item_img">
+					<a href=""><img src="images/time.jpg" alt=""></a>
+				</div>
+				<div class="shop_gelary_item_desc">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore debitis voluptate dolore minus. Nostrum.</p>
+				</div>
+				<div class="shop_gelary_item_text">
+					<p class="price">423 грн</p>
+				</div>
+			</div>
+			<div class="shop_gelary_item">
+				<div class="gelare_item_img">
+					<a href=""><img src="images/time.jpg" alt=""></a>
+				</div>
+				<div class="shop_gelary_item_desc">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore debitis voluptate dolore minus. Nostrum.</p>
+				</div>
+				<div class="shop_gelary_item_text">
+					<p class="price">423 грн</p>
+					<button type="button">Купить</button>
+				</div>
+			</div>
+			<div class="shop_gelary_item">
+				<div class="gelare_item_img">
+					<a href=""><img src="images/time.jpg" alt=""></a>
+				</div>
+				<div class="shop_gelary_item_desc">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore debitis voluptate dolore minus. Nostrum.</p>
+				</div>
+				<div class="shop_gelary_item_text">
+					<p class="price">423 грн</p>
+					<button type="button">Купить</button>
+				</div>
+				<div class="last_more_show">
+					<a class="btn_more_some" id="show-more">Еще</a>
+				</div>
+			</div>
+			<div class="shop_gelary_item last_more">
+				<div class="gelare_item_img">
+					<a href=""><img src="images/time.jpg" alt=""></a>
+				</div>
+				<div class="shop_gelary_item_desc">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore debitis voluptate dolore minus. Nostrum.</p>
+				</div>
+				<div class="shop_gelary_item_text">
+					<p class="price">423 грн</p>
+					<button type="button">Купить</button>
+				</div>
+			</div>
+			<div class="shop_gelary_item last_more">
+				<div class="gelare_item_img">
+					<a href=""><img src="images/time.jpg" alt=""></a>
+				</div>
+				<div class="shop_gelary_item_desc">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore debitis voluptate dolore minus. Nostrum.</p>
+				</div>
+				<div class="shop_gelary_item_text">
+					<p class="price">423 грн</p>
+					<button type="button">Купить</button>
+				</div>
+			</div>
+			<div class="shop_gelary_item last_more">
+				<div class="gelare_item_img">
+					<a href=""><img src="images/time.jpg" alt=""></a>
+				</div>
+				<div class="shop_gelary_item_desc">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore debitis voluptate dolore minus. Nostrum.</p>
+				</div>
+				<div class="shop_gelary_item_text">
+					<p class="price">423 грн</p>
+					<button type="button">Купить</button>
+				</div>
+			</div>
+			<div class="shop_gelary_item last_more">
+				<div class="gelare_item_img">
+					<img src="images/time.jpg" alt="">
+				</div>
+				<div class="shop_gelary_item_button">
+					<button type="button">Купить</button>
+				</div>
+				<div class="shop_gelary_item_text">
+					<a href=""></a>
+					<p class="price">423 грн</p>
+				</div>
+			</div>
+		</div><!--last-->
+		<div class=" good_coise_gelary shop_gelary">
+			<span>Лушие предложения</span>
+			<div class="shop_gelary_item">
+				<div class="gelare_item_img">
+					<a href=""><img src="images/time.jpg" alt=""></a>
+				</div>
+				<div class="shop_gelary_item_desc">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore debitis voluptate dolore minus. Nostrum.</p>
+				</div>
+				<div class="shop_gelary_item_text">
+					<p class="price">423 грн</p>
+					<button type="button">Купить</button>
+				</div>
+			</div>
+			<div class="shop_gelary_item">
+				<div class="gelare_item_img">
+					<a href=""><img src="images/time.jpg" alt=""></a>
+				</div>
+				<div class="shop_gelary_item_desc">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore debitis voluptate dolore minus. Nostrum.</p>
+				</div>
+				<div class="shop_gelary_item_text">
+					<p class="price">423 грн</p>
+					<button type="button">Купить</button>
+				</div>
+			</div>
+			<div class="shop_gelary_item">
+				<div class="gelare_item_img">
+					<a href=""><img src="images/time.jpg" alt=""></a>
+				</div>
+				<div class="shop_gelary_item_desc">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore debitis voluptate dolore minus. Nostrum.</p>
+				</div>
+				<div class="shop_gelary_item_text">
+					<p class="price">423 грн</p>
+					<button type="button">Купить</button>
+				</div>
+			</div>
+			<div class="shop_gelary_item">
+				<div class="gelare_item_img">
+					<a href=""><img src="images/time.jpg" alt=""></a>
+				</div>
+				<div class="shop_gelary_item_desc">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore debitis voluptate dolore minus. Nostrum.</p>
+				</div>
+				<div class="shop_gelary_item_text">
+					<p class="price">423 грн</p>
+					<button type="button">Купить</button>
+				</div>
+			</div>
+			<div class="shop_gelary_item">
+				<div class="gelare_item_img">
+					<a href=""><img src="images/time.jpg" alt=""></a>
+				</div>
+				<div class="shop_gelary_item_desc">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore debitis voluptate dolore minus. Nostrum.</p>
+				</div>
+				<div class="shop_gelary_item_text">
+					<p class="price">423 грн</p>
+					<button type="button">Купить</button>
+				</div>
+			</div>
+			<div class="shop_gelary_item">
+				<div class="gelare_item_img">
+					<a href=""><img src="images/time.jpg" alt=""></a>
+				</div>
+				<div class="shop_gelary_item_desc">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore debitis voluptate dolore minus. Nostrum.</p>
+				</div>
+				<div class="shop_gelary_item_text">
+					<p class="price">423 грн</p>
+					<button type="button">Купить</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
 <footer>
 	<div class="footer_wrap">
 		<div class="footer_logo">
@@ -160,6 +1797,11 @@
 		</div>
 	</div>
 </footer>
-</div>
+		<script src="js/script-2.js" type="text/javascript"></script>
+		<script src="slick/slick.min.js" type="text/javascript"></script>
+		<script src="js/script.js" type="text/javascript"></script>
+		<script src="js/custom js.js"></script>
+		<script>$(function() { $.scrollIt(); });</script>
 </body>
+
 </html>
