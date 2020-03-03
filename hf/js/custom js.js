@@ -1,11 +1,12 @@
 var Modal = (function() {
 
   var trigger = $qsa('.modal__trigger'); // what you click to activate the modal
-  var modals = $qsa('.modal'); // the entire modal (takes up entire window)
+  var modals = $qsa('.modal');// the entire modal (takes up entire window)
+  var modals = $qsa('.modal_nav'); 
   var modalsbg = $qsa('.modal__bg'); // the entire modal (takes up entire window)
   var content = $qsa('.modal__content'); // the inner content of the modal
-  var closers = $qsa('.modal__close'); // an element used to close the modal
-  var w = window;
+  var closers = $qsa('.modal__close');
+  var modalsbg = $qsa('.modal__bg'); 
   var isOpen = false;
   var contentDelay = 400; // duration after you click the button and wait for the content to show
   var len = trigger.length;
@@ -50,7 +51,7 @@ var Modal = (function() {
   var moveTrig = function(trig, modal, div) {
     var trigProps = trig.getBoundingClientRect();
     var m = modal;
-    var mProps = m.querySelector('.modal__content').getBoundingClientRect();
+    var mProps = m.querySelector('.modal__content, modal__nav ').getBoundingClientRect();
     var transX, transY, scaleX, scaleY;
     var xc = w.innerWidth / 2;
     var yc = w.innerHeight / 2;
@@ -96,7 +97,6 @@ var Modal = (function() {
 
     if (!isOpen) {
       // select the content inside the modal
-      var content = m.querySelector('.modal__content');
       // reveal the modal
       m.classList.add('modal--active');
       // reveal the modal content
@@ -191,8 +191,8 @@ var Modal = (function() {
 Modal.init();
 // Menu js for Position fixed
     $(window).scroll(function(){
-      var window_top = $(window).scrollTop() + 2;
-}
+      var window_top = $(window).scrollTop() + 2
+});
 
 // Single page scroll menu
   var pluginName = 'ScrollIt',
@@ -309,10 +309,24 @@ Modal.init();
       e.preventDefault();
       doScroll(e);
     });
-
   };
+$(function(){
+  $('.btn').on('click', function(){
+      $('.collapse').slideToggle();
+    });
+  });
 
+//menu_shop
+  $('.btn_shop_nav').click(function(){
+  $(".collapse").slideToggle();
+});
   $('.btn_more_some').click(function(){
   $(".last_more").fadeToggle(400);
   document.getElementById("show-more").style.visibility = "hidden";
 });
+//$(document).mouseup(function (e) {
+//    var container = $("modal_nav");
+//    if (container.has(e.target).length === 0){
+//        container.hide();
+//    }
+//});
