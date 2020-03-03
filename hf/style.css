@@ -1136,7 +1136,7 @@ input[type="radio"]:checked + label:after {
 .btn_shop_nav {
   position: absolute;
   margin-right: 18px;
-  margin-top: -48px;
+  margin-top: -52px;
   display: inline-block;
   display: none;
   width: 20px;
@@ -1215,6 +1215,7 @@ input[type="radio"]:checked + label:after {
 .slider_content img {
   width: 100%;
   min-height: 187px;
+  overflow: hidden;
 }
 
 .slider_footer {
@@ -1535,20 +1536,21 @@ input[type="radio"]:checked + label:after {
     border-top: 1px solid #3d3d3d;
     border-bottom: 1px solid #3d3d3d;
   }
+  .shop_nav_colapse{
+  	width: 280px;
+  }
   .nav-ul li a {
     margin: 0 auto;
   }
   .slider_header{
   	flex-direction: column;
   	align-items: flex-start;
-  	justify-content: s
+  	height: 57px;
   }
   .slider_see{
   	width: 157px;
   	margin-left:auto;
   }
-}
-@media screen and (max-width: 485px) {
 	.shop_serch input[type="serch"]{
   	width: 74%;
   }
