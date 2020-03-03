@@ -1544,7 +1544,7 @@ input[type="radio"]:checked + label:after {
   	height: 65px;
   }
   .slider_see{
-  	width: 157px;
+  	width: 228px;
   	margin-top: 5px;
   	margin-left:auto;
   }
