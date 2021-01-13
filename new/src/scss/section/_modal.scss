@@ -1,0 +1,105 @@
+.form-create{
+  display: block;
+  padding: 10px 25px;
+  margin-left: auto;
+  background-color: $green;
+  color: $white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.modal-container{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  background-color: rgba(0,0,0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 99;
+}
+.form-position{
+  position: relative;
+  max-width: 352px;
+  width: 90%;
+  min-width: 289px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $darkWhite;
+  border-radius: 5px;
+  box-shadow: 0 0 25px rgba( 255, 255, 255, .5);
+}
+
+.form-position__title{
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: bold;
+  color: $lightBlack;
+}
+.form-soc{
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  &__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #305DB8;
+    color: $white;
+    border-radius: 5px;
+    transition: background-color .3s linear;
+    &:hover{
+      background-color: #022263;
+    }
+  }
+  &__icon{
+    width: 30px;
+    height: 25px;
+    fill: $white;
+  }
+}
+.form-soc__link--google{
+  background-color: #DF4A32;
+  &:hover{
+    background-color: #AB1F09;
+  }
+}
+.form__items__input{
+  width: 100%;
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.close-form{
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  outline: none;
+  justify-content: space-between;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 5);
+  cursor: pointer;
+  &__line{
+    display: block;
+    background-color: $darkBlack;
+    height: 2px;
+    transform: rotate(45deg);
+    &:last-child{
+      transform: rotate(125deg) translateX(-2px);
+    }
+  }
+}

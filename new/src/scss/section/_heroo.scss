@@ -1,0 +1,68 @@
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 10px 0 10px;
+  box-sizing: border-box;
+}
+
+.nav-item-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn{
+  display: none;
+}
+.nav-items__href {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  padding: 10px 0;
+  margin-left: 52px;
+  position: relative;
+  &:after{
+    content: '';
+    display: block;
+    width:0;
+    height: 2px;
+    background-color: $green;
+    position: absolute;
+    bottom: 0;
+    transition: 0.3s linear width;
+  }
+  &:hover:after{
+    width: 100%;
+  }
+}
+
+.hero {
+  background: linear-gradient(177.86deg, #000000 -40.81%, rgba(0, 0, 0, 0.5) 90%), url("../img/heroo_bg.jpg"), no-repeat, center;
+  background-size: cover;
+}
+
+.hero__title-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 101px);
+}
+
+.big-title {
+  font-size: 72px;
+  text-transform: uppercase;
+  color: $white;
+  text-align: center;
+  line-height: 107px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.hero__sub-title {
+  color: $white;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+}

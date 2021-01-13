@@ -1,0 +1,62 @@
+.contact{
+    padding-top: 120px;
+}
+.contact__description{
+    max-width: 735px;
+    text-align: center;
+    margin: 0 auto;
+    color: $lightGray;
+    position: relative;
+    &:after{
+        content: url("../img/quote-hand-drawn-symbol.png");
+        position: absolute;
+        display: inline-block;
+        top: calc(100% + 30px);
+        left: 48%;
+
+    }
+}
+.contact__title{
+    padding-top: 80px;
+    text-align: center;
+}
+.contact__description__title-description{
+    font-size: 12px;
+    color: $lightGray;
+}
+.simple-position{
+    display: flex;
+}
+.simple-position-item{
+    width: 50%;
+    &__img{
+        padding: 20px 0;
+        & img{
+            width: 35px;
+            height: 35px;
+        }
+    }
+    &__description{
+        padding: 12px;
+    }
+}
+.simple-position-item--green, .simple-position-item--gray{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: $lightGray;;
+    background-color: $darkWhite;
+}
+.simple-position-item--green{
+    background-color: $darkGreen;
+    color: white;
+}
+.simple-position-item__description--white{
+    color: white;
+}
+.simple-position--contact{
+    padding-top: 120px;
+}
