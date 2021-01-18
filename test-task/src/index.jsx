@@ -1,10 +1,6 @@
 import React, {createElement} from "react";
 import ReactDOM from "react-dom";
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     ReactDOM.render(<div></div>, root)
-// });
-
 class Layout extends React.Component {
     constructor(props) {
         super(props);
@@ -60,17 +56,17 @@ class Layout extends React.Component {
                 <h2 className='title'>
                     Clock
                 </h2>
-                <div className="clock-container">
-                    <div className="current-clock">
+                <div className="clock__container">
+                    <div className="clock__time">
                         {this.state.hours + ":" + this.state.minutes + ":" + this.state.seconds}
                     </div>
-                    <div className="clock-control">
-                        <button className="btn btn-start" onClick={this.handleClockStart.bind(this)}>Start clock
+                    <div className="clock__control">
+                        <button className="btn btn--start" onClick={this.handleClockStart.bind(this)}>Start clock
                         </button>
-                        <button className="btn btn-stop" onClick={this.handleClockStop.bind(this)}>Stop timer</button>
-                        <button className="btn btn-info" onDoubleClick={this.handleClockPause.bind(this)}>Pause
+                        <button className="btn btn--stop" onClick={this.handleClockStop.bind(this)}>Stop timer</button>
+                        <button className="btn btn--pause" onDoubleClick={this.handleClockPause.bind(this)}>Pause
                         </button>
-                        <button className="btn btn-reset" onClick={this.handleClockReset.bind(this)}>Reset Timer
+                        <button className="btn btn--reset" onClick={this.handleClockReset.bind(this)}>Reset Timer
                         </button>
                     </div>
                 </div>
@@ -78,6 +74,7 @@ class Layout extends React.Component {
         )
     }
 }
+import style from './style.css'
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<Layout/>, rootElement);
