@@ -52,7 +52,7 @@ let test = document.querySelector('.lets-works__wrapper');
 const galleryHeight = (className) => {
     let letsItemsShow = document.querySelectorAll(className)
     let letsItemShow = document.querySelector(className)
-    let letsGalleryHeight = (letsItemShow.clientHeight / 2) * letsItemsShow.length + 421
+    let letsGalleryHeight = (letsItemShow.clientHeight / 2) * letsItemsShow.length + 471
     test.style.height = `${letsGalleryHeight}px`;
 }
 const itemPosition = (className, offset, oldDescClass, newDescClass, oldImgClass, newImgClass) => {
