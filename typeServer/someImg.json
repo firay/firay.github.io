@@ -20,8 +20,8 @@
     "sauce": "img/rabbit/1_00008.png"
   },{
   "Rabbit": "/img/rabbit/1_00011.png",
-    "sauce": "img/rabbit/1_00010.png"
-  },
+  "sauce": "img/rabbit/1_00010.png"
+},
   {
     "Rabbit": "/img/rabbit/1_00013.png",
     "sauce": "img/rabbit/1_00012.png"
@@ -65,7 +65,7 @@
   {
     "Rabbit": "/img/rabbit/1_00035.png",
     "sauce": "img/rabbit/1_00032.png"
-  }
+  },
   {
     "sauce": "img/rabbit/1_00034.png"
   }
