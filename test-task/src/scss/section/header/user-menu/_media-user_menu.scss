@@ -1,0 +1,111 @@
+@media (max-width: 1100px) and (min-width: 980px) {
+  .search-container {
+    width: 200px;
+  }
+  .simple-ul--user>.user-list>.user-list__href{
+    padding: 5px 12px;
+  }
+}
+
+@media (max-width: 980px) {
+  .search-container {
+    width: calc(100% - 125px);
+  }
+  .user__content__info {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    z-index: 13;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: calc(100vh - 90px);
+    background-color: $opacityBlack;
+    transition: 0.5s linear all;
+    opacity: 0;
+    display: none;
+  }
+  .btn--show-menu {
+    display: flex;
+  }
+  .simple-ul--user {
+    width: 280px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    background-color: $opacityBlack;
+  }
+  .user-list__href {
+    padding: 15px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    border-right: 0;
+    border: none;
+
+    &:first-child {
+      .user-list__href {
+        margin: 0;
+      }
+    }
+  }
+  .user-list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #cbcbcb;
+  }
+  @media (max-width: 880px) {
+    .user__content__info  {
+      top: 74px;
+      height: calc(100% - 74px);
+    }
+    .logo {
+      width: 130px;
+    }
+  }
+  @media (max-width: 615px) {
+    .user {
+      grid-template-columns: 155px auto;
+    }
+    .user__content__info  {
+      top: 120px;
+      height: calc(100% - 120px);
+    }
+  }
+  @media (max-width: 484px) {
+    .user {
+      padding: 40px 10px 60px 10px;;
+      grid-template-columns: 115px auto;
+    }
+    .logo {
+      width: 100px;
+      &--logo {
+        font-style: italic;
+        font-size: 10px;
+      }
+    }
+  }
+  @media (max-width: 446px) {
+    .user{
+      grid-template-columns: auto;
+    }
+    .logo{
+      display: none;
+    }
+    .logo--small{
+      display: block;
+      width: 65px;
+    }
+    .logo__img{
+      width: 100%;
+    }
+    .user__content__info  {
+      top: 125px;
+      height: calc(100% - 125px);
+    }
+  }
+}
