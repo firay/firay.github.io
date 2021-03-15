@@ -1,0 +1,52 @@
+.topper {
+  background-color: #f5f7f9;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__link-container{
+    display: flex;
+    align-items: center;
+    color: $gray;
+    @include timesNewRoman-standard;
+  }
+}
+.logo--small{
+  display: none;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+.container--topper {
+  display: grid;
+  grid-template-columns: 25% auto auto;
+  align-items: center;
+  padding: 0 5px;
+  box-sizing: border-box;
+  position: relative;
+}
+.container--topper__ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.simple-ul--lang{
+  margin-right: 25px;
+  @include timesNewRoman-standard
+}
+.simple-ul--currency{
+  @include bitter-standard
+}
+.phone-icon {
+  width: 15px;
+  height: 10px;
+  margin-right: 10px;
+}
+
+.btn--userAction {
+  font-size: 16px;
+  color: #59b7c2;
+}
+
+@import "topper_media";
