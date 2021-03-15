@@ -55,8 +55,8 @@ const createFonts = () =>{
 
 const createJs = () => {
     return gulp.src(path.src.js)
-        // .pipe(rename("script.min.js"))
-        // .pipe(uglify())
+        .pipe(rename("script.min.js"))
+        .pipe(uglify())
         .pipe(gulp.dest(path.dist.js))
         .pipe(browserSync.stream())
 }
