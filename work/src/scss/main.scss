@@ -1,0 +1,25 @@
+@import "reset";
+@import "veriables";
+@import "mix_in";
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+.some{
+  height: 20px;
+  writing-mode:bt-lr;
+}
+.wrapper{
+  max-width: 1280px;
+}
+
+@import "section/header";
+@import "section/sideBar";
+@import "section/hello";
+@import "section/footer";
+@import "section/hero";
+@import "section/gallery";
+@import "section/component-of-success";

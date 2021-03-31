@@ -1,0 +1,130 @@
+.hello {
+  display: flex;
+  height: 100vh;
+  background-color: black;
+
+  &__custom {
+    text-align: right;
+    width: 50%;
+    height: 100%;
+  }
+
+  &__title {
+    color: rgba(226, 224, 224, 0.37);
+
+  }
+
+  &__sub-title {
+    font-size: 18px;
+    letter-spacing: 0.31em;
+    color: #7D7878;
+  }
+
+  .hay {
+    display: block;
+    padding-right: 18px;
+    font-size: 12.5vw;
+    color: #989393;
+    text-align: right;
+  }
+}
+
+.hello__decoration__container {
+  font-size: 33vw;
+  display: inline-block;
+  letter-spacing: -0.13em;
+  text-transform: lowercase;
+}
+
+.what-we-do {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.list-item {
+  padding: 10px 5px;
+  color: white;
+  font-size: 90px;
+}
+
+.h {
+  font-size: 52vw;
+  letter-spacing: -9vw;
+}
+.hello__decoration{
+  display: inline-block;
+  &:first-child{
+    animation:  1.2s  hello__decoration-second infinite linear;
+
+  }
+}
+.hello__decoration:nth-child(2) {
+  color: rgba(148, 36, 36, .55);
+  animation:  1s  hello__decoration-first infinite linear;
+
+}
+
+.hello__decoration:nth-child(3) {
+  color: rgba(47, 47, 47, .7%);
+  animation:  1s  hello__decoration-next infinite linear;
+}
+
+.hello__decoration:nth-child(4) {
+  color: black;
+  @include textShadow;
+  animation:  1.4s  hello__decoration-second infinite linear reverse;
+}
+
+@keyframes hello__decoration-first {
+    0%{
+      transform: translate(0,0px)  rotate(0deg) scale(1.0);
+    }
+    25%{
+      transform: translate(-2px,0px)  rotate(2deg) scale(0.87);
+    }
+    50%{
+      transform: translate(2px,0px)  rotate(-5deg) scale(0.95);
+    }
+    75%{
+      transform: translate(-2px,0px)  rotate(5deg) scale(1.01);
+    }
+  100%{
+      transform: translate(0,2px)  rotate(0deg) scale(1.0);
+     }
+}
+@keyframes hello__decoration-second {
+  0%{
+    transform: translate(0,0px)  rotate(0deg)
+  }
+  25%{
+    transform: translate(3px,0px)  rotate(0deg)
+  }
+  50%{
+    transform: translate(-4px,0px)  rotate(0deg)
+  }
+  75%{
+    transform: translate(3px,0px)  rotate(0deg)
+  }
+  100%{
+    transform: translate(-2px,0px)  rotate(0deg)
+  }
+}
+@keyframes hello__decoration-next {
+  0% {
+    transform: translate(0, 0px) rotate(0deg) scale(1.0);
+  }
+  25% {
+    transform: translate(-2px, 0px) rotate(-3deg) scale(0.9);
+  }
+  50% {
+    transform: translate(2px, 0px) rotate(3deg) scale(1.05);
+  }
+  75% {
+    transform: translate(-2px, 0px) rotate(-4deg) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 2px) rotate(0deg) scale(1.0);
+  }
+}

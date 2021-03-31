@@ -1,0 +1,150 @@
+footer{
+  padding: 5vh;
+  display: flex;
+}
+.footer-content{
+  width: 812px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &__text{
+    display: flex;
+    align-items: center;
+    color: #C5BCBC;
+    font-size: 40px;
+  }
+}
+.contact-form{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.form-input{
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font-size: 3.5em;
+  box-sizing: border-box;
+  padding: 5px 20px;
+  display: block;
+  width: 100%;
+  @include heightInput;
+  background-color: transparent;
+  color:#444242;
+  outline: none;
+  transition: 0.5s color linear;
+}
+.form-input:focus{
+  color: white;
+}
+.form-area{
+  outline: none;
+  @include heightInput;
+  font-size: 3.5em;
+  padding: 5px 20px;
+  display: block;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid gray;
+  background-color: transparent;
+  color:#444242;
+}
+.btn-submit{
+  cursor: pointer;
+  text-align: left;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  font-size: 14.4vw;
+  color:#444242;
+  box-sizing: content-box;
+  background-color: transparent;
+  position: relative;
+  &:after{
+    margin-left: 4px;
+    content: attr(data-text);
+    text-align: left;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    font-size: 14.5vw;
+    color:white;
+    display: block;
+    overflow: hidden;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.7s width linear;
+    height: 100%;
+  }
+  &:hover:after{
+    width: 101%;
+  }
+}
+.footer-circle{
+  display: flex;
+  &__item{
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 45px;
+    margin-left: 22px;
+    background-color: #C4C4C4;
+    &:first-child{
+      animation: 1.2s linear firsCircleUp infinite;
+    }
+    &:nth-child(2){
+      animation: 1.2s linear firsCircleUp infinite;
+      animation-delay: 0.2s;
+    }
+    &:last-child{
+      animation: 1.2s linear firsCircleUp infinite;
+      animation-delay: 0.4s;
+    }
+  }
+}
+.test{
+  width: 370px;
+  height: 370px;
+}
+.triangle{
+  transform-origin: center;
+  animation: infinite 1s linear triangleAnimation;
+}
+@keyframes triangleAnimation {
+  0%{
+    transform: scale(1.0);
+  }
+  25%{
+    transform: scale(1.05)
+  }
+  50%{
+    transform: scale(1.1)
+  }
+  75%{
+    transform: scale(1.05);
+  }
+  100%{
+    transform: scale(1.0);
+  }
+}
+@keyframes firsCircleUp {
+  0%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(-5px);
+  }
+  50%{
+    transform: translateY(-15px);
+  }
+  75%{
+    transform: translateY(-5px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
