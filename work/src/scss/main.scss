@@ -2,18 +2,15 @@
 @import "veriables";
 @import "mix_in";
 
-
-
-
 html {
   scroll-behavior: smooth;
-}
-.some{
-  height: 20px;
-  writing-mode:bt-lr;
+  font-family: 'Open Sans';
 }
 .wrapper{
   max-width: 1280px;
+}
+body {
+  min-width: 320px;
 }
 
 @import "section/header";
@@ -23,3 +20,5 @@ html {
 @import "section/hero";
 @import "section/gallery";
 @import "section/component-of-success";
+@import "section/media/hello_media";
+@import "section/media/header_media";

@@ -2,16 +2,16 @@
   display: flex;
   height: 100vh;
   background-color: black;
-
   &__custom {
     text-align: right;
     width: 50%;
     height: 100%;
   }
-
   &__title {
+    text-align: left;
+    transform: translateX(-8%);
     color: rgba(226, 224, 224, 0.37);
-
+    max-height: 660px;
   }
 
   &__sub-title {
@@ -19,18 +19,17 @@
     letter-spacing: 0.31em;
     color: #7D7878;
   }
-
-  .hay {
-    display: block;
-    padding-right: 18px;
-    font-size: 12.5vw;
-    color: #989393;
-    text-align: right;
-  }
+}
+.hay {
+  display: block;
+  padding-right: 18px;
+  font-size: 12.5vw;
+  color: #989393;
+  text-align: right;
 }
 
 .hello__decoration__container {
-  font-size: 33vw;
+  font-size: 23vw;
   display: inline-block;
   letter-spacing: -0.13em;
   text-transform: lowercase;
@@ -46,18 +45,20 @@
 .list-item {
   padding: 10px 5px;
   color: white;
-  font-size: 90px;
+  font-size: 4.5vw;
 }
 
 .h {
-  font-size: 52vw;
+  font-size: 36vw;
   letter-spacing: -9vw;
+  font-weight: 700;
+  line-height: 28vw;
+
 }
 .hello__decoration{
   display: inline-block;
   &:first-child{
     animation:  1.2s  hello__decoration-second infinite linear;
-
   }
 }
 .hello__decoration:nth-child(2) {
