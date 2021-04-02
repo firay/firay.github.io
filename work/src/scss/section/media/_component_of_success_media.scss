@@ -1,0 +1,33 @@
+@media (max-width: 1680px) and (min-width: 900px) {
+  .brands-text{
+    min-width: 83px;
+  }
+
+  .title__action{
+    line-height: 40px;
+  }
+  .decoration-container__svg{
+    height: 18vw;
+  }
+}
+@media (max-width: 1101px) and (min-width: 900px){
+  .decoration-container__svg{
+    height: 17vw;
+    max-height: 250px;
+  }
+  .decoration-triangle{
+    width: 85px;
+  }
+}
+
+
+@media (max-width: 901px) {
+  .component-of-success{
+    display: none;
+  }
+}
+@media (max-width: 2600px) and (min-width: 1981px){
+  .decoration-container__svg{
+    height: 40vh;
+  }
+}

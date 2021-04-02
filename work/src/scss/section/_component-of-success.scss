@@ -1,5 +1,4 @@
 .component-of-success{
-  height: 100vh;
   position: relative;
   //&:after{
   //  content: attr(data-text);
@@ -33,10 +32,10 @@
   display: flex;
   &__text{
     letter-spacing: -.09em;
-    font-size: 77px;
     color: #7A7878;
-    padding: 13% 0 2% 33%;
-    width: 410px;
+    font-size: 6vw;
+    padding: 10% 0 2% 37%;
+    width: fit-content;
   }
 }
 .component-of-success__container{
@@ -48,13 +47,13 @@
 }
 .decoration-container__svg{
   background-color: black;
-    margin-top: 10%;
+    margin-top: 5%;
     border-top-left-radius: 11vmin;
     border-top-right-radius: 11vmin;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100% - 26%);
+    height: calc(29vh + 40px);
 }
 .decoration-triangle{
   max-width: 150px;
@@ -63,11 +62,12 @@
 .success__items__container{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 67.7%;
 }
 .success__items{
-  padding-left: 31%;
-  padding-bottom: 22px;
+  padding-left: 35%;
+  padding-bottom: 30px;
 }
 .success-list__text{
   font-weight: 300;
@@ -81,7 +81,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  padding: 4.3% 10% 0 10%;
+  padding: 0 10% 0 10%;
 }
 
 .brands-text{
@@ -98,9 +98,11 @@
   text-align: center;
   margin-top: -.12em;
   min-width: 65%;
-  padding: 15% 0;
+  padding: 22% 0;
   border-radius: 50%;
   background-color: black;
+  max-height: 265px;
+  max-width: 265px;
 }
 .success-list--row__text{
   display: inline-block;
@@ -108,12 +110,12 @@
   line-height: 50%;
   text-align: center;
   letter-spacing: -0.13em;
+  padding: 0 3vw;
 }
 .title__action{
   margin: 0 auto;
-  max-width: 432px;
   text-align: center;
-  font-size: 66px;
+  font-size: 4vw;
   line-height: 56px;
   letter-spacing: -0.08em;
   color: #444242;

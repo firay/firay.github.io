@@ -7,7 +7,7 @@ html {
   font-family: 'Open Sans';
 }
 .wrapper{
-  max-width: 1280px;
+  max-width: 1440px;
 }
 body {
   min-width: 320px;
@@ -22,3 +22,5 @@ body {
 @import "section/component-of-success";
 @import "section/media/hello_media";
 @import "section/media/header_media";
+@import "section/media/component_of_success_media";
+@import "section/media/gallery_media";
