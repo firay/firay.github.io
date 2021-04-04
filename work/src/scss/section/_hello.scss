@@ -1,8 +1,9 @@
 .hello {
+  padding-top: 80px;
   display: flex;
-  height: 100vh;
   background-color: black;
   position: relative;
+  overflow: hidden;
   & .scroll-down{
     display: none;
   }
@@ -24,12 +25,19 @@
     color: #7D7878;
   }
 }
+.what-we-do__text{
+  font-weight: 400;
+
+}
+.what-we-do__text .smart{
+  font-weight: 300;
+}
 .hay {
   display: block;
-  padding-right: 18px;
-  font-size: 12.5vw;
+  font-size: 10.5vw;
   color: #989393;
   text-align: right;
+  padding-bottom: 4vw;
 }
 
 .hello__decoration__container {
@@ -61,6 +69,7 @@
 }
 .hello__decoration{
   display: inline-block;
+  font-weight: 700;
   &:first-child{
     animation:  1.2s  hello__decoration-second infinite linear;
   }
@@ -68,12 +77,43 @@
 .hello__decoration:nth-child(2) {
   color: rgba(148, 36, 36, .55);
   animation:  1s  hello__decoration-first infinite linear;
-
+  position: relative;
+  &:after {
+    content: attr(data-text);
+    display: inline-block;
+    text-shadow: -0.03em -0.03em 0 #fff, -0.03em -0.02em 0 #fff, -0.03em -0.01em 0 #fff, -0.03em 0 0 #fff, -0.03em 0.01em 0 #fff, -0.03em 0.02em 0 #fff, -0.03em 0.03em 0 #fff, -0.02em -0.03em 0 #fff, -0.02em -0.02em 0 #fff, -0.02em -0.01em 0 #fff, -0.02em 0 0 #fff, -0.02em 0.01em 0 #fff, -0.02em 0.02em 0 #fff, -0.02em 0.03em 0 #fff, -0.01em -0.03em 0 #fff, -0.01em -0.02em 0 #fff, -0.01em -0.01em 0 #fff, -0.01em 0 0 #fff, -0.01em 0.01em 0 #fff, -0.01em 0.02em 0 #fff, -0.01em 0.03em 0 #fff, 0 -0.03em 0 #fff, 0 -0.02em 0 #fff, 0 -0.01em 0 #fff, 0 0 0 #fff, 0 0.01em 0 #fff, 0 0.02em 0 #fff, 0 0.03em 0 #fff, 0.01em -0.03em 0 #fff, 0.01em -0.02em 0 #fff, 0.01em -0.01em 0 #fff, 0.01em 0 0 #fff, 0.01em 0.01em 0 #fff, 0.01em 0.02em 0 #fff, 0.01em 0.03em 0 #fff, 0.02em -0.03em 0 #fff, 0.02em -0.02em 0 #fff, 0.02em -0.01em 0 #fff, 0.02em 0 0 #fff, 0.02em 0.01em 0 #fff, 0.02em 0.02em 0 #fff, 0.02em 0.03em 0 #fff, 0.03em -0.03em 0 #fff, 0.03em -0.02em 0 #fff, 0.03em -0.01em 0 #fff, 0.03em 0 0 #fff, 0.03em 0.01em 0 #fff, 0.03em 0.02em 0 #fff, 0.03em 0.03em 0 #fff;
+    position: absolute;
+    font-size: .16em;
+    color: #000;
+    transform-origin: left;
+    letter-spacing: -.075em;
+    top: 0em;
+    left: 0.8em;
+    transform: rotate(270deg);
+    opacity: 0.37;
+    font-weight: 700;
+  }
 }
 
 .hello__decoration:nth-child(3) {
   color: rgba(47, 47, 47, .7%);
   animation:  1s  hello__decoration-next infinite linear;
+  position: relative;
+  &:after {
+    content: attr(data-text);
+    display: inline-block;
+    text-shadow: -0.03em -0.03em 0 #fff, -0.03em -0.02em 0 #fff, -0.03em -0.01em 0 #fff, -0.03em 0 0 #fff, -0.03em 0.01em 0 #fff, -0.03em 0.02em 0 #fff, -0.03em 0.03em 0 #fff, -0.02em -0.03em 0 #fff, -0.02em -0.02em 0 #fff, -0.02em -0.01em 0 #fff, -0.02em 0 0 #fff, -0.02em 0.01em 0 #fff, -0.02em 0.02em 0 #fff, -0.02em 0.03em 0 #fff, -0.01em -0.03em 0 #fff, -0.01em -0.02em 0 #fff, -0.01em -0.01em 0 #fff, -0.01em 0 0 #fff, -0.01em 0.01em 0 #fff, -0.01em 0.02em 0 #fff, -0.01em 0.03em 0 #fff, 0 -0.03em 0 #fff, 0 -0.02em 0 #fff, 0 -0.01em 0 #fff, 0 0 0 #fff, 0 0.01em 0 #fff, 0 0.02em 0 #fff, 0 0.03em 0 #fff, 0.01em -0.03em 0 #fff, 0.01em -0.02em 0 #fff, 0.01em -0.01em 0 #fff, 0.01em 0 0 #fff, 0.01em 0.01em 0 #fff, 0.01em 0.02em 0 #fff, 0.01em 0.03em 0 #fff, 0.02em -0.03em 0 #fff, 0.02em -0.02em 0 #fff, 0.02em -0.01em 0 #fff, 0.02em 0 0 #fff, 0.02em 0.01em 0 #fff, 0.02em 0.02em 0 #fff, 0.02em 0.03em 0 #fff, 0.03em -0.03em 0 #fff, 0.03em -0.02em 0 #fff, 0.03em -0.01em 0 #fff, 0.03em 0 0 #fff, 0.03em 0.01em 0 #fff, 0.03em 0.02em 0 #fff, 0.03em 0.03em 0 #fff;
+    position: absolute;
+    font-size: 3vw;
+    color: #000;
+    transform-origin: left;
+    letter-spacing: -.1em;
+    top: 0em;
+    left: 1em;
+    transform: rotate(270deg);
+    opacity: 0.37;
+    font-weight: 700;
+  }
 }
 
 .hello__decoration:nth-child(4) {
@@ -87,13 +127,13 @@
       transform: translate(0,0px)  rotate(0deg) scale(1.0);
     }
     25%{
-      transform: translate(-2px,0px)  rotate(2deg) scale(0.87);
+      transform: translate(-2px,0px)  rotate(1deg) scale(0.87);
     }
     50%{
-      transform: translate(2px,0px)  rotate(-5deg) scale(0.95);
+      transform: translate(2px,0px)  rotate(-1deg) scale(0.95);
     }
     75%{
-      transform: translate(-2px,0px)  rotate(5deg) scale(1.01);
+      transform: translate(-2px,0px)  rotate(1deg) scale(1.00);
     }
   100%{
       transform: translate(0,2px)  rotate(0deg) scale(1.0);
@@ -121,13 +161,13 @@
     transform: translate(0, 0px) rotate(0deg) scale(1.0);
   }
   25% {
-    transform: translate(-2px, 0px) rotate(-3deg) scale(0.9);
+    transform: translate(-2px, 0px) rotate(-1deg) scale(0.9);
   }
   50% {
-    transform: translate(2px, 0px) rotate(3deg) scale(1.05);
+    transform: translate(2px, 0px) rotate(1deg) scale(1.0);
   }
   75% {
-    transform: translate(-2px, 0px) rotate(-4deg) scale(0.9);
+    transform: translate(-2px, 0px) rotate(-1deg) scale(0.9);
   }
   100% {
     transform: translate(0, 2px) rotate(0deg) scale(1.0);

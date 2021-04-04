@@ -15,12 +15,15 @@ body {
 
 @import "section/header";
 @import "section/sideBar";
-@import "section/hello";
 @import "section/footer";
+@import "section/hello";
+
 @import "section/hero";
 @import "section/gallery";
 @import "section/component-of-success";
 @import "section/media/hello_media";
 @import "section/media/header_media";
 @import "section/media/component_of_success_media";
+@import "section/media/_footer_media.css";
 @import "section/media/gallery_media";
+

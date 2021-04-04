@@ -7,9 +7,10 @@ footer{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
   &__text{
     max-width: 500px;
-    display: flex;
+    display: block;
     align-items: center;
     color: #C5BCBC;
     font-size: 2.1vw;
@@ -50,14 +51,23 @@ footer{
   border-bottom: 1px solid gray;
   background-color: transparent;
   color:#444242;
+  transition: 0.5s color linear;
+  max-width: 100%;
+  resize: none;
+}
+.form-area:focus{
+  color: white;
 }
 .footer-content__decoration__container{
   width: 50%;
   display: grid;
   grid-template-columns: 43px  74%;
   grid-gap: 43px;
+  padding-left: 6.9vw;
+  padding-top: 2vw;
 }
 .footer-content__decoration{
+
   display: inline-block;
   margin: 5px 0;
   border-radius: .9375rem;
@@ -66,6 +76,7 @@ footer{
   background-color: #f49393;
 }
 .btn-submit{
+  overflow: hidden;
   cursor: pointer;
   text-align: left;
   text-transform: uppercase;
@@ -100,6 +111,7 @@ footer{
 }
 .footer-circle{
   display: flex;
+  padding-bottom: 90px;
   &__item{
     display: block;
     width: 45px;
@@ -127,6 +139,12 @@ footer{
 .triangle{
   transform-origin: center;
   animation: infinite 1s linear triangleAnimation;
+}
+.footer-content__decoration__triangle{
+  position: absolute;
+  top: -1vw;
+  right: 4vw;
+  width: 16.4vw;
 }
 @keyframes triangleAnimation {
   0%{
@@ -162,3 +180,83 @@ footer{
     transform: translateY(0px);
   }
 }
+@media (max-width: 1289px) and (min-width: 989px) {
+  .footer-content__decoration__triangle {
+    right: 2vw;
+
+  }
+  .footer-content__decoration__container{
+    grid-template-columns: 23px 74%;
+  }
+}
+
+@media (max-width: 989px) and (min-width: 676px){
+  .footer-content__decoration__triangle {
+    right: 1vw;
+    top: 1vw;
+  }
+  .footer-content__decoration__container{
+    grid-template-columns: 23px 74%;
+    grid-gap: 23px;
+    height: 87px;
+    padding-top: 3vw;
+    align-items: center;
+  }
+  .form-input{
+    font-size: 5.6vw;
+  }
+
+}
+@media (max-width: 676px){
+  footer{
+    flex-direction: column;
+    height: initial;
+  }
+  .footer-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-circle{
+    display: none;
+  }
+  .footer-content__decoration{
+    display: none;
+  }
+  .footer-content__decoration__container{
+    grid-template-columns: 1fr;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+  .footer-content__text{
+    display: block;
+    padding: 20px 0 0 0;
+    font-size: 24px;
+    max-width: 100%;
+    letter-spacing: -0.05em;
+  }
+  .footer-content__decoration__triangle{
+    transform: rotate(90deg);
+    position: initial;
+    width:136px;
+  }
+  .send{
+    color: #f49393;
+  }
+  .contact-form{
+    width: 90%;
+    margin: 0 5%;
+  }
+  .form-input,.form-area{
+    font-size: 9vw;
+  }
+  .btn-submit{
+    font-size: 30.4vw;
+  }
+  .btn-submit:after{
+    font-size: 30.4vw;
+  }
+}
+
