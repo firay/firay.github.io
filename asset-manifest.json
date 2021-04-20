@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/firay/firay.github.io/static/css/main.bf086d83.chunk.css",
-    "main.js": "/firay/firay.github.io/static/js/main.c2acd916.chunk.js",
-    "main.js.map": "/firay/firay.github.io/static/js/main.c2acd916.chunk.js.map",
-    "runtime-main.js": "/firay/firay.github.io/static/js/runtime-main.ba32b769.js",
-    "runtime-main.js.map": "/firay/firay.github.io/static/js/runtime-main.ba32b769.js.map",
-    "static/js/2.70e8595a.chunk.js": "/firay/firay.github.io/static/js/2.70e8595a.chunk.js",
-    "static/js/2.70e8595a.chunk.js.map": "/firay/firay.github.io/static/js/2.70e8595a.chunk.js.map",
-    "static/js/3.d561fe6d.chunk.js": "/firay/firay.github.io/static/js/3.d561fe6d.chunk.js",
-    "static/js/3.d561fe6d.chunk.js.map": "/firay/firay.github.io/static/js/3.d561fe6d.chunk.js.map",
+    "main.css": "/firay/firay.github.io/static/css/main.a9444f1f.chunk.css",
+    "main.js": "/firay/firay.github.io/static/js/main.c7dca2e7.chunk.js",
+    "main.js.map": "/firay/firay.github.io/static/js/main.c7dca2e7.chunk.js.map",
+    "runtime-main.js": "/firay/firay.github.io/static/js/runtime-main.d55657e1.js",
+    "runtime-main.js.map": "/firay/firay.github.io/static/js/runtime-main.d55657e1.js.map",
+    "static/js/2.d255a1bc.chunk.js": "/firay/firay.github.io/static/js/2.d255a1bc.chunk.js",
+    "static/js/2.d255a1bc.chunk.js.map": "/firay/firay.github.io/static/js/2.d255a1bc.chunk.js.map",
+    "static/js/3.65649b2f.chunk.js": "/firay/firay.github.io/static/js/3.65649b2f.chunk.js",
+    "static/js/3.65649b2f.chunk.js.map": "/firay/firay.github.io/static/js/3.65649b2f.chunk.js.map",
     "index.html": "/firay/firay.github.io/index.html",
-    "static/css/main.bf086d83.chunk.css.map": "/firay/firay.github.io/static/css/main.bf086d83.chunk.css.map",
-    "static/js/2.70e8595a.chunk.js.LICENSE.txt": "/firay/firay.github.io/static/js/2.70e8595a.chunk.js.LICENSE.txt",
+    "static/css/main.a9444f1f.chunk.css.map": "/firay/firay.github.io/static/css/main.a9444f1f.chunk.css.map",
+    "static/js/2.d255a1bc.chunk.js.LICENSE.txt": "/firay/firay.github.io/static/js/2.d255a1bc.chunk.js.LICENSE.txt",
+    "static/media/fonts.css": "/firay/firay.github.io/static/media/AeroportMono.d0fff666.woff",
     "static/media/direction.scss": "/firay/firay.github.io/static/media/decoration_bg.6f3d92a2.jpg",
     "static/media/hero.scss": "/firay/firay.github.io/static/media/hero_bg.0c0ecb44.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ba32b769.js",
-    "static/js/2.70e8595a.chunk.js",
-    "static/css/main.bf086d83.chunk.css",
-    "static/js/main.c2acd916.chunk.js"
+    "static/js/runtime-main.d55657e1.js",
+    "static/js/2.d255a1bc.chunk.js",
+    "static/css/main.a9444f1f.chunk.css",
+    "static/js/main.c7dca2e7.chunk.js"
   ]
 }
