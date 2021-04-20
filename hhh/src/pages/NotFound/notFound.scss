@@ -1,0 +1,30 @@
+.not-found{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 30px 60px 65px 70px;
+    position: relative;
+}
+.notFound-logo__decoration{
+    width: 120px;
+}
+.not-found__content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+}
+.notFound-error{
+    font-size: 144px;
+    line-height: 90px;
+    text-transform: uppercase;
+    color: #D9D9D9;
+}
+.contact-items{
+    margin-top: 120px;
+}
+.not-found__content__img{
+    max-width: 38.7vw;
+    & img{
+    width: 100%;
+      }
+}

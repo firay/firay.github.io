@@ -1,0 +1,25 @@
+.direction{
+  width: 100vw;
+  height: 100vh;
+  background: url("img/decoration_bg.jpg"),  no-repeat;
+  background-size: cover;
+  &__title{
+    height: 106px;
+    font-size: 2vw;
+    line-height: 100%;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 70px;
+    padding-left: 90px;
+  }
+  &__content{
+    display: flex;
+    height: calc(100vh - 106px);
+    align-items: center;
+  }
+}
+.direction__ways{
+  width: 100%;
+}
