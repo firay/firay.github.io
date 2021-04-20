@@ -1,1 +1,0 @@
-const navContainer=document.querySelector(".contact-us"),scroll=new LocomotiveScroll({el:document.querySelector("[data-scroll-container]"),smooth:!0,multiplier:.75});navContainer.addEventListener("click",e=>{e.preventDefault();const o=document.querySelector("#contat");scroll.scrollTo(o)});
