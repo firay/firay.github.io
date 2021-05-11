@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.38773da3.chunk.css",
+    "main.js": "/static/js/main.b8461455.chunk.js",
+    "main.js.map": "/static/js/main.b8461455.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b2f4b3ca.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b2f4b3ca.js.map",
+    "static/js/2.b02848f6.chunk.js": "/static/js/2.b02848f6.chunk.js",
+    "static/js/2.b02848f6.chunk.js.map": "/static/js/2.b02848f6.chunk.js.map",
+    "static/js/3.599a88d4.chunk.js": "/static/js/3.599a88d4.chunk.js",
+    "static/js/3.599a88d4.chunk.js.map": "/static/js/3.599a88d4.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.38773da3.chunk.css.map": "/static/css/main.38773da3.chunk.css.map",
+    "static/js/2.b02848f6.chunk.js.LICENSE.txt": "/static/js/2.b02848f6.chunk.js.LICENSE.txt",
+    "static/media/educationPage.scss": "/static/media/Education_bg.0faa52af.jpg",
+    "static/media/direction.scss": "/static/media/decoration_bg.6f3d92a2.jpg",
+    "static/media/hero.scss": "/static/media/hero_bg.0c0ecb44.jpg",
+    "static/media/EductionPageMobile.scss": "/static/media/mobile_bg.52a62451.jpg",
+    "static/media/BrandMobile.scss": "/static/media/mobile_brand.58fca27f.jpg",
+    "static/media/ServicesMobile.scss": "/static/media/services.31d0eb48.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b2f4b3ca.js",
+    "static/js/2.b02848f6.chunk.js",
+    "static/css/main.38773da3.chunk.css",
+    "static/js/main.b8461455.chunk.js"
+  ]
+}
