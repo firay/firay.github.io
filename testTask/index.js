@@ -6,7 +6,10 @@ const imgEnter =   document.querySelector('.gallery__enter')
 
 // привожу строку в норму если имя картинки слишком большое
 const limitStr = (str, length) =>{
-    return (str.substr(0, length -3) + '...')
+    if (str.length>40){
+        return (str.substr(0, length -3) + '...')
+    }
+    return str
 };
 
 // выводим на екран
