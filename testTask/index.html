@@ -2,143 +2,469 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title</title>
-    <link rel="stylesheet" href="./css/style.css">
 </head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+    .horizontal{
+        display: flex;
+    }
+    .btn{
+        display: inline-block;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        cursor: pointer;
+    }
+    .header-content{
+        padding: 2px 0;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 108px 1fr;
+    }
+    .mobile-action{
+        max-width: 94px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .btn--mobile{
+        height: 48px;
+        width: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 15px;
+        box-sizing: border-box;
+    }
+    .btn__line{
+        background-color: transparent;
+        border-bottom: 1px solid #262626;
+        width: 100%;
+        height: 1px;
+    }
+    .horizontal--user-actions{
+        padding-right: 10px;
+    }
+    .btn--find{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 34px;
+        box-sizing: border-box;
+    }
+    .btn--find__svg{
+        width: 16px;
+        height: 16px;
+        fill: #262626;
+        transform: scale(-1,1);
+    }
+
+    .logo{
+        width: 100%;
+    }
+    .logo img{
+        width: 100%;
+    }
+    .btn-surface-container{
+        grid-column: 1/4;
+        grid-row: 2;
+        padding: 9px 15px 7px 15px;
+        margin: 2px 0;
+        border: 1px solid #e5e5e5;
+        border-left: none;
+        border-right: none;
+        position: relative;
+    }
+    .btn--surface{
+        font-weight: 700;
+        font-family: "Microsoft JhengHei";
+        font-size: 14px;
+    }
+    .btn--surface .list__action__svg{
+        width: 17px;
+        height: 11px;
+        fill: #262626;
+        margin-left: 6px;
+        margin-top: 4px;
+        transform: translateY(2px);
+    }
+    .list__action__search{
+        width: 16px;
+        height: 18px;
+        transform: scale(-1,1);
+        margin-left: 5px;
+    }
+    .list__action__svg{
+        width: 7px;
+        height: 7px;
+        fill: #6c6c6c;
+        margin-left: 7px;
+        margin-top: 7px;
+    }
+    .horizontal--nav .list:first-child, .horizontal--nav .list:nth-child(2), .horizontal--nav .list:nth-child(3){
+        display: none;
+    }
+    .horizontal--user-actions .list:first-child, .horizontal--user-actions .list:nth-child(2){
+        display: none;
+    }
+    .list:nth-child(3) span, .list:nth-child(2) span{
+        display: none;
+    }
+    .list__href__decoration{
+        width: 32px;
+        height: 32px;
+        margin:  5px 6px 0 10px;
+        display: inline-block;
+        background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' stroke='%23707070'%3E%3Cg class='mectrl_stroke' stroke-width='1.9' fill='none'%3E%3Ccircle cx='32' cy='32' r='30.25'/%3E%3Cg transform='matrix(1.1 0 0 1.1 8.8 5.61)'%3E%3Ccircle class='mectrl_stroke' cx='20' cy='16' r='7'/%3E%3Cpath class='mectrl_stroke' d='M30 35h10m-5-5v10M30.833 32.09A11 11 0 009 34'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat center;
+        background-size: cover;
+    }
+    .list:last-child .list__href__text{
+        display: none;
+    }
+    .list__action__cart{
+        margin-left: 3px;
+        margin-top: 4px;
+        fill: transparent;
+        width: 17px;
+        height: 16px;
+    }
+    .user-actions{
+        display: flex;
+        justify-content: flex-end;
+
+    }
+    .horizontal--user-actions{
+        align-items: center;
+        justify-content: space-between;
+        min-width: 86px;
+    }
+    nav{
+        display: none;
+    }
+
+    @media (min-width: 860px) {
+        .btn--find, .btn--search{
+            min-width: 16px;
+            min-height: 16px;
+            padding: 9px 5px 15px 5px;
+        }
+        .header-content{
+            grid-template-columns: 133px 106px 1fr auto;
+            box-sizing: border-box;
+            padding: 0 3% 0 3%;
+            font-family: "Microsoft Himalaya";
+            min-height: 54px;
+        }
+        .logo{
+            padding: 10px 17px 11px 8px;
+            box-sizing: border-box;
+        }
+        .btn--surface{
+
+            padding: 11px 10px 20px 10px;
+            margin-left: 20px;
+            font-size: 17px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+            text-decoration-thickness: 2px;
+            text-decoration-color: transparent;
+        }
+        .btn--list, .list__href{
+            font-size: 13px;
+            font-family: "Microsoft JhengHei";
+            padding: 9px 5px 15px 5px;
+            color: #262626;
+            display: flex;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+            text-decoration-thickness: 2px;
+            text-decoration-color: transparent;
+        }
+        .user-actions .list:last-child.list__href{
+            padding: 0 5px;
+        }
+        .btn--surface:hover{
+            text-decoration-color: #262626;
+        }
+        .btn-surface-container:before{
+            content: "";
+            display: inline-block;
+            width: 2px;
+            height: 24px;
+            top: 11px;
+            left: 9px;
+            background-color: #262626;
+            position: absolute;
+        }
+        .mobile-action{
+            display: none;
+        }
+        .btn-surface-container{
+            grid-column: 2/3;
+            grid-row: 1;
+            border: none;
+            padding: 0;
+        }
+        .btn-surface-container svg{
+            display: none;
+        }
+        .btn--list:hover, .btn--find:hover{
+            text-decoration-color: #262626;
+        }
+        .horizontal--nav .list{
+            margin-left: 4px;
+        }
+        .horizontal--nav .list:first-child{
+            margin-left: 0px;
+        }
+        .horizontal--nav{
+            display: flex;
+            align-items: center;
+        }
+        nav{
+            display: block;
+        }
+        .horizontal--nav .list{
+            display: none;
+        }
+        .horizontal--nav .list:first-child, .horizontal--nav .list:last-child{
+            display: block;
+        }
+        .horizontal--user-actions .list:first-child, .horizontal--user-actions .list:nth-child(2){
+            display: block;
+        }
+        .btn__text{
+            display: none;
+        }
+        .list__href__decoration{
+            margin-bottom: 5px;
+            margin-left: 13px;
+        }
+        .user-actions .list:last-child .list__href__text{
+            padding-bottom: 5px;
+        }
+
+        .user-actions .list{
+            margin-right: 10px;
+        }
+        .user-actions .list:nth-child(3){
+            margin-right: 5px;
+        }
+    }
+    @media (min-width: 928px) {
+        .horizontal--nav .list:nth-child(2){
+            display: block;
+        }
+    }
+    @media (min-width: 1029px) {
+        .horizontal--nav .list:nth-child(3){
+            display: block;
+        }
+    }
+    @media (min-width: 1170px) {
+        .horizontal--nav .list:nth-child(4){
+            display: block;
+        }
+    }
+    @media (min-width: 1200px) {
+        .horizontal--nav .list:nth-child(5){
+            display: block;
+        }
+
+        .horizontal--nav .list:last-child{
+            display: none;
+        }
+
+
+    }
+    @media (min-width: 1400px) {
+        .header-content {
+            padding: 0 4.2% 0 5.2%;
+            grid-template-columns: 133px 101px 1fr auto;
+        }
+        .horizontal--user-actions{
+            padding-right: 0;
+        }
+        .btn-surface-container:before{
+            height: 24px;
+            top: 13px;
+        }
+        .btn--surface{
+            font-weight: 700;
+            position: relative;
+            padding: 13px 10px 19px 10px;
+        }
+        .btn--surface{
+            margin-left: 20px;
+        }
+        .list__action__cart{
+            margin-left: 5px;
+            transform: translateY(-4px);
+        }
+        .user-actions .list{
+            margin-right: 12px;
+        }
+        .user-actions .list:nth-child(3){
+            margin-right: 17px;
+        }
+        .btn--list, .list__href , .btn--find{
+            padding: 15px 6px 20px 6px;
+        }
+        .btn--find{
+            padding: 12px 6px 15px 6px;
+        }
+        .list span ,.list:nth-child(3) span{
+            display: block;
+        }
+        .list__href__text{
+            display: block;
+        }
+        .btn--find{
+            flex-direction: row;
+            width: fit-content;
+        }
+        .user-actions .btn--list{
+            display: flex;
+        }
+        .user-actions .list:last-child .list__href{
+            padding: 0;
+        }
+        .list:last-child .list__href__text{
+            display: block;
+        }
+        .user-actions .list:nth-child(2) span{
+            display: block;
+        }
+        .list__href{
+            display: flex;
+            align-items: center;
+        }
+    }
+    @media (min-width: 1920px) {
+        .header-content {
+            padding: 0 8% 0 8%;
+            grid-template-columns: 133px 128px 1fr auto;
+        }
+        .btn--surface{
+            margin-left: 34px;
+        }
+        .btn--list, .list__href , .btn--find{
+            padding: 15px 10px 20px 10px;
+        }
+        .btn--find{
+            padding: 12px 10px 15px 10px;
+        }
+        .user-actions .list{
+            margin-right: 14px;
+        }
+        .user-actions .list:nth-child(3){
+            margin-right: 8px;
+        }
+        .list__href__decoration{
+            margin-top: 0;
+        }
+    }
+</style>
 <body>
 <header>
-    <div class="logo">
-        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 1228.000000 1280.000000"
-             preserveAspectRatio="xMidYMid meet">
-            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-               stroke="none">
-                <path d="M4679 12611 c-107 -21 -182 -123 -248 -336 -58 -189 -97 -428 -171
-                    -1042 -57 -471 -59 -483 -81 -483 -18 0 -94 31 -674 277 -896 380 -1418 563
-                    -1604 563 -124 0 -154 -68 -111 -247 90 -377 575 -1384 859 -1784 35 -49 65
-                    -88 67 -86 3 2 -37 73 -87 158 -120 205 -253 473 -316 639 -146 385 -228 817
-                    -178 945 44 117 102 106 535 -100 334 -159 791 -391 995 -506 180 -101 420
-                    -254 444 -283 27 -32 -29 -264 -99 -414 -50 -107 -109 -189 -201 -281 -135
-                    -135 -254 -223 -809 -598 -404 -273 -549 -374 -740 -519 -603 -457 -916 -842
-                    -1073 -1322 -82 -249 -110 -457 -122 -897 -3 -121 -11 -276 -16 -345 -28 -338
-                    -136 -717 -320 -1124 -73 -161 -150 -301 -272 -492 -150 -236 -187 -324 -187
-                    -445 0 -232 238 -641 548 -940 169 -164 279 -234 504 -324 154 -61 212 -98
-                    363 -230 267 -232 425 -321 680 -385 171 -43 293 -53 552 -47 407 9 797 80
-                    1302 236 90 28 169 51 176 51 48 0 350 -419 921 -1275 194 -291 364 -543 379
-                    -560 l26 -30 -5 27 c-10 44 -117 271 -216 457 -254 479 -480 841 -788 1260
-                    -79 107 -139 198 -135 202 4 4 67 39 138 76 158 84 288 165 447 279 l120 86
-                    86 -58 c172 -114 500 -370 815 -636 289 -244 526 -458 1107 -998 488 -454 531
-                    -493 634 -583 136 -119 151 -118 59 3 -213 281 -664 770 -1093 1185 -427 413
-                    -800 718 -1280 1050 -102 70 -190 133 -197 139 -9 8 10 35 78 110 104 114 133
-                    153 121 160 -4 3 -70 -35 -145 -84 -76 -50 -147 -94 -158 -100 -16 -9 -54 9
-                    -242 118 -255 149 -501 281 -667 360 -321 151 -288 119 195 -193 318 -205 524
-                    -345 543 -368 11 -13 -3 -25 -90 -79 -196 -123 -584 -323 -613 -316 -7 2 -75
-                    71 -153 154 -146 157 -303 307 -410 393 -140 112 -112 68 251 -394 87 -110
-                    156 -206 155 -214 -4 -17 -172 -89 -356 -152 -480 -163 -871 -198 -1275 -113
-                    -433 91 -1058 385 -1465 689 -190 142 -279 247 -297 352 -14 88 42 229 211
-                    524 213 376 265 522 215 605 -29 48 -73 58 -215 50 -67 -4 -158 -10 -204 -15
-                    -97 -9 -160 -1 -180 26 -39 52 6 155 220 499 240 387 332 564 397 767 47 148
-                    55 203 55 352 0 150 -9 218 -55 415 -74 310 -87 411 -69 540 37 272 207 563
-                    583 994 640 734 1426 1257 2172 1445 185 46 323 68 665 106 361 40 404 47 559
-                    81 347 78 584 223 680 418 94 191 87 475 -18 795 -72 217 -165 406 -327 663
-                    -126 200 -174 280 -174 294 0 23 68 29 109 9 58 -28 222 -143 841 -593 1183
-                    -861 1798 -1321 2290 -1716 647 -518 1110 -955 1527 -1441 323 -378 588 -729
-                    1158 -1540 396 -563 623 -865 651 -865 17 0 14 7 -51 147 -145 307 -510 910
-                    -833 1373 -733 1051 -1645 2052 -2587 2841 -539 451 -1010 799 -2254 1669
-                    -344 240 -740 518 -878 618 -341 244 -487 330 -588 347 -22 4 -47 8 -55 10 -8
-                    1 -31 -1 -51 -4z"/>
-                                    <path d="M2855 6880 c-294 -18 -618 -84 -678 -138 -48 -43 -42 -67 43 -176 46
-                    -59 139 -198 245 -363 61 -97 141 -178 200 -204 151 -67 385 -10 641 156 156
-                    101 266 228 358 412 59 118 107 162 214 193 23 7 42 17 42 22 0 4 -2 8 -4 8
-                    -2 0 -46 9 -97 19 -135 28 -398 60 -589 71 -178 11 -195 11 -375 0z"/>
-                                    <path d="M4234 3942 c6 -11 127 -63 391 -172 110 -45 313 -137 450 -204 500
-                    -245 843 -461 1686 -1062 404 -288 591 -416 598 -409 13 13 -273 282 -513 482
-                    -533 446 -954 729 -1431 963 -349 171 -658 288 -984 371 -153 38 -207 47 -197
-                    31z"/>
-            </g>
-        </svg>
+    <div class="header-content">
+        <div class="mobile-action">
+            <div class="btn btn--mobile">
+                <div class="btn__line"></div>
+                <div class="btn__line"></div>
+                <div class="btn__line"></div>
+            </div>
+            <button class="btn btn--find">
+                <svg class="btn--find__svg" version="1.1"  xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 612.08 612.08" xml:space="preserve"><g><path d="M237.927,0C106.555,0,0.035,106.52,0.035,237.893c0,131.373,106.52,237.893,237.893,237.893
+                            c50.518,0,97.368-15.757,135.879-42.597l0.028-0.028l176.432,176.433c3.274,3.274,8.48,3.358,11.839,0l47.551-47.551
+                            c3.274-3.274,3.106-8.703-0.028-11.838L433.223,373.8c26.84-38.539,42.597-85.39,42.597-135.907C475.82,106.52,369.3,0,237.927,0z
+                            M237.927,419.811c-100.475,0-181.918-81.443-181.918-181.918S137.453,55.975,237.927,55.975s181.918,81.443,181.918,181.918
+                            S338.402,419.811,237.927,419.811z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                </svg>
+            </button>
+        </div>
+        <a href="" class="logo">
+            <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="microsoft">
+        </a>
+        <div class="btn-surface-container"><button class="btn btn--surface">Surface <svg class="list__action__svg" version="1.1"  viewBox="0 0 284.929 284.929" ><g>
+            <path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                       L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                    c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                    c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+        </svg></button></div>
+        <nav>
+            <ul class="horizontal horizontal--nav">
+                <li class="list"><button  class="btn btn--list">Computers<svg class="list__action__svg" version="1.1"  viewBox="0 0 284.929 284.929" ><g>
+                    <path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                       L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                    c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                    c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                    </svg></button>
+                </li>
+                <li class="list"><button  class="btn btn--list">Computers for Business <svg class="list__action__svg" version="1.1"  viewBox="0 0 284.929 284.929" ><g>
+                    <path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                       L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                    c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                    c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                    </svg></button></li>
+                <li class="list"><button  class="btn btn--list">Accessories<svg class="list__action__svg" version="1.1"  viewBox="0 0 284.929 284.929" ><g>
+                    <path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                       L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                    c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                    c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                    </svg></button> </li>
+                <li class="list"><button  class="btn btn--list">Shop now <svg class="list__action__svg" version="1.1"  viewBox="0 0 284.929 284.929" ><g>
+                    <path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                       L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                    c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                    c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                    </svg></button></li>
+                <li class="list"><a href="#" class="list__href">Support</a></li>
+                <li class="list"><button  class="btn btn--list">More <svg class="list__action__svg" version="1.1"  viewBox="0 0 284.929 284.929" ><g>
+                    <path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                       L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                    c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                    c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                </svg></button></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <ul class="horizontal horizontal--user-actions">
+                <li class="list"><button class="btn btn--list">All Microsoft <svg class="list__action__svg" version="1.1"  viewBox="0 0 284.929 284.929" ><g>
+                    <path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                    L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                    c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                    c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                </svg></button></li>
+                <li class="list"><button class="btn btn--find"><span class="list__href__text">Search</span>
+                    <svg class="list__action__search" version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 612.08 612.08" xml:space="preserve"><g><path d="M237.927,0C106.555,0,0.035,106.52,0.035,237.893c0,131.373,106.52,237.893,237.893,237.893
+                            c50.518,0,97.368-15.757,135.879-42.597l0.028-0.028l176.432,176.433c3.274,3.274,8.48,3.358,11.839,0l47.551-47.551
+                            c3.274-3.274,3.106-8.703-0.028-11.838L433.223,373.8c26.84-38.539,42.597-85.39,42.597-135.907C475.82,106.52,369.3,0,237.927,0z
+                            M237.927,419.811c-100.475,0-181.918-81.443-181.918-181.918S137.453,55.975,237.927,55.975s181.918,81.443,181.918,181.918
+                            S338.402,419.811,237.927,419.811z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                    </svg></button>
+                </li>
+                <li class="list"><button class="btn btn--list"><span>Cart</span><svg class="list__action__cart" height="27" viewBox="0 0 30 27" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M1.39999 1.70001H6.60001" stroke="#262626" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M6.60001 1.70001L11 18.9" stroke="#262626" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M11.8 18.9H28.3" stroke="#262626" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M13.8 25.7C15.4569 25.7 16.8 24.3569 16.8 22.7C16.8 21.0432 15.4569 19.7 13.8 19.7C12.1431 19.7 10.8 21.0432 10.8 22.7C10.8 24.3569 12.1431 25.7 13.8 25.7Z" stroke="#262626" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M25.3 25.7C26.9568 25.7 28.3 24.3569 28.3 22.7C28.3 21.0432 26.9568 19.7 25.3 19.7C23.6431 19.7 22.3 21.0432 22.3 22.7C22.3 24.3569 23.6431 25.7 25.3 25.7Z" stroke="#262626" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M25.7 14.6H11.3C10.7 14.6 10.1 14.2 10 13.6L8.1 6.90001C7.9 6.00001 8.49999 5.20001 9.39999 5.20001H27.5C28.4 5.20001 29.1 6.10001 28.8 6.90001L26.9 13.6C26.9 14.2 26.4 14.6 25.7 14.6Z" stroke="#262626" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg></button></li>
+                <li class="list"><a href="#" class="list__href"><span class="list__href__text">Sign in</span> <span class="list__href__decoration"></span></a></li>
+            </ul>
+        </div>
     </div>
-    <nav>
-        <ul class="ul-horizontal">
-            <li class="list"><a class="list__href" href="#">Действие 1</a></li>
-            <li class="list"><a class="list__href" href="#">Действие 2</a></li>
-            <li class="list"><a class="list__href" href="#">Действие 3</a></li>
-            <li class="list"><a class="list__href" href="#">Действие 4</a></li>
-            <li class="list"><a class="list__href" href="#">Действие 5</a></li>
-        </ul>
-    </nav>
 </header>
-<main>
-    <div class="file-container">
-        <h3 class="title title--file-load">Для загрузки выберете изображение</h3>
-        <input type="file" class="file-load" multiple accept=".jpg, .jpeg, .png" id="file-load">
-        <label class="file-load__label" for="file-load">
-            <span class="file-load__text">Прикрепить файл</span>
-        </label>
-    </div>
-    <p class="gallery__enter title">Информация не добавлена, загрузите, пожалуйста, изображения загрузите, пожалуйста изображения</p>
-    <div class="gallery">
-    </div>
-</main>
-<footer>
-    <div class="logo">
-        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 1228.000000 1280.000000"
-             preserveAspectRatio="xMidYMid meet">
-            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-               stroke="none">
-                <path d="M4679 12611 c-107 -21 -182 -123 -248 -336 -58 -189 -97 -428 -171
-                    -1042 -57 -471 -59 -483 -81 -483 -18 0 -94 31 -674 277 -896 380 -1418 563
-                    -1604 563 -124 0 -154 -68 -111 -247 90 -377 575 -1384 859 -1784 35 -49 65
-                    -88 67 -86 3 2 -37 73 -87 158 -120 205 -253 473 -316 639 -146 385 -228 817
-                    -178 945 44 117 102 106 535 -100 334 -159 791 -391 995 -506 180 -101 420
-                    -254 444 -283 27 -32 -29 -264 -99 -414 -50 -107 -109 -189 -201 -281 -135
-                    -135 -254 -223 -809 -598 -404 -273 -549 -374 -740 -519 -603 -457 -916 -842
-                    -1073 -1322 -82 -249 -110 -457 -122 -897 -3 -121 -11 -276 -16 -345 -28 -338
-                    -136 -717 -320 -1124 -73 -161 -150 -301 -272 -492 -150 -236 -187 -324 -187
-                    -445 0 -232 238 -641 548 -940 169 -164 279 -234 504 -324 154 -61 212 -98
-                    363 -230 267 -232 425 -321 680 -385 171 -43 293 -53 552 -47 407 9 797 80
-                    1302 236 90 28 169 51 176 51 48 0 350 -419 921 -1275 194 -291 364 -543 379
-                    -560 l26 -30 -5 27 c-10 44 -117 271 -216 457 -254 479 -480 841 -788 1260
-                    -79 107 -139 198 -135 202 4 4 67 39 138 76 158 84 288 165 447 279 l120 86
-                    86 -58 c172 -114 500 -370 815 -636 289 -244 526 -458 1107 -998 488 -454 531
-                    -493 634 -583 136 -119 151 -118 59 3 -213 281 -664 770 -1093 1185 -427 413
-                    -800 718 -1280 1050 -102 70 -190 133 -197 139 -9 8 10 35 78 110 104 114 133
-                    153 121 160 -4 3 -70 -35 -145 -84 -76 -50 -147 -94 -158 -100 -16 -9 -54 9
-                    -242 118 -255 149 -501 281 -667 360 -321 151 -288 119 195 -193 318 -205 524
-                    -345 543 -368 11 -13 -3 -25 -90 -79 -196 -123 -584 -323 -613 -316 -7 2 -75
-                    71 -153 154 -146 157 -303 307 -410 393 -140 112 -112 68 251 -394 87 -110
-                    156 -206 155 -214 -4 -17 -172 -89 -356 -152 -480 -163 -871 -198 -1275 -113
-                    -433 91 -1058 385 -1465 689 -190 142 -279 247 -297 352 -14 88 42 229 211
-                    524 213 376 265 522 215 605 -29 48 -73 58 -215 50 -67 -4 -158 -10 -204 -15
-                    -97 -9 -160 -1 -180 26 -39 52 6 155 220 499 240 387 332 564 397 767 47 148
-                    55 203 55 352 0 150 -9 218 -55 415 -74 310 -87 411 -69 540 37 272 207 563
-                    583 994 640 734 1426 1257 2172 1445 185 46 323 68 665 106 361 40 404 47 559
-                    81 347 78 584 223 680 418 94 191 87 475 -18 795 -72 217 -165 406 -327 663
-                    -126 200 -174 280 -174 294 0 23 68 29 109 9 58 -28 222 -143 841 -593 1183
-                    -861 1798 -1321 2290 -1716 647 -518 1110 -955 1527 -1441 323 -378 588 -729
-                    1158 -1540 396 -563 623 -865 651 -865 17 0 14 7 -51 147 -145 307 -510 910
-                    -833 1373 -733 1051 -1645 2052 -2587 2841 -539 451 -1010 799 -2254 1669
-                    -344 240 -740 518 -878 618 -341 244 -487 330 -588 347 -22 4 -47 8 -55 10 -8
-                    1 -31 -1 -51 -4z"/>
-                <path d="M2855 6880 c-294 -18 -618 -84 -678 -138 -48 -43 -42 -67 43 -176 46
-                    -59 139 -198 245 -363 61 -97 141 -178 200 -204 151 -67 385 -10 641 156 156
-                    101 266 228 358 412 59 118 107 162 214 193 23 7 42 17 42 22 0 4 -2 8 -4 8
-                    -2 0 -46 9 -97 19 -135 28 -398 60 -589 71 -178 11 -195 11 -375 0z"/>
-                <path d="M4234 3942 c6 -11 127 -63 391 -172 110 -45 313 -137 450 -204 500
-                    -245 843 -461 1686 -1062 404 -288 591 -416 598 -409 13 13 -273 282 -513 482
-                    -533 446 -954 729 -1431 963 -349 171 -658 288 -984 371 -153 38 -207 47 -197
-                    31z"/>
-            </g>
-        </svg>
-    </div>
-    <div class="footer__content">
-        <ul class="ul-horizontal">
-            <li class="list"><a class="list__href" href="#">Телефон</a></li>
-            <li class="list"><a class="list__href" href="#">Адрес</a></li>
-        </ul>
-    </div>
-</footer>
-<script src="index.js"></script>
+<div class="kk"></div>
 </body>
 </html>
