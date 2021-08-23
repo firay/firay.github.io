@@ -1,0 +1,19 @@
+<div class="modal-wrapper" (click)="closeModal()"></div>
+<div class="expert-modal-container"  *ngFor="let item of expert" [@modalState]="state">
+  <button class="btn btn--close" (click)="closeModal()"><app-close-svg></app-close-svg></button>
+  <div class="expert-modal-container--header">
+    <div class="expert-modal-img">
+      <img src="{{item.img}}" *ngIf="item.img" alt="">
+      <div class="expert-modal-text">
+        <b class="title title--small">{{item.name}}</b>
+        <p class="expert-modal-job">{{item.profession}}</p>
+      </div>
+    </div>
+  </div>
+  <ul class="horizontal-ul horizontal-ul--expert-modal">
+    <li class="list"><a href="" class="list__href"><span class="list__href__svg"><app-phone-svg [cssClass]="'iconSvg'"></app-phone-svg></span>Call</a></li>
+    <li class="list"><a href="" class="list__href"><span class="list__href__svg"><app-chat-svg [cssClass]="'iconSvg'"></app-chat-svg></span>Call</a></li>
+    <li class="list"><a href="" class="list__href"><span class="list__href__svg"><app-facebook-svg [cssClass]="'iconSvg'"></app-facebook-svg></span>Facebook</a></li>
+    <li class="list"><a href="" class="list__href"><span class="list__href__svg"><app-gmail-svg  [cssClass]="'iconSvg'"></app-gmail-svg></span>Email</a></li>
+  </ul>
+</div>

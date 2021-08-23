@@ -1,0 +1,33 @@
+.footer{
+  background-color: #FFFFFF;
+}
+.footer__wrapper{
+  box-sizing: border-box;
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 16px 40px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 69px 1fr auto;
+}
+.footer__author{
+  font-size: 12px;
+  line-height: 150%;
+  color: #C4C4C4;
+  font-family: 'Inter';
+}
+@media (max-width: 773px) {
+  .footer__wrapper {
+    grid-template-columns: 40px 1fr;
+    & .horizontal-ul {
+      display: none;
+    }
+  }
+}
+@media (max-width: 565px) {
+  .footer__wrapper{
+    display: flex;
+    padding: 16px 20px;
+    justify-content: space-between;
+  }
+}

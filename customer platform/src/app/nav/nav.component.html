@@ -1,0 +1,24 @@
+<div class="nav" (click)="hideMenu($event, nav)" #nav>
+  <div class="nav-container">
+    <a routerLink="/" (click)="hideMenuLink($event, nav)" class="nav-container__logo" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"><app-brain></app-brain>MASTERMINDS</a>
+    <nav>
+      <ul class="horizontal-ul horizontal-ul--nav">
+        <li class="nav-list" routerLinkActive="active-nav-link" *ngIf="isShowFav"><span  *ngIf="counter!==null " [@divState]="state" class="fav-counter">{{counter}}</span><a  routerLink="favourite" class="nav-list__href" (click)="hideMenuLink($event, nav)">Favorites</a></li>
+        <li class="nav-list" routerLinkActive="active-nav-link"><a routerLink="search" class="nav-list__href" (click)="hideMenuLink($event, nav)">Search</a></li>
+        <li class="nav-list" routerLinkActive="active-nav-link"><a routerLink="#" class="nav-list__href" (click)="hideMenuLink($event, nav)">About us</a></li>
+      </ul>
+    </nav>
+    <div class="nav-container__btn-wrapper" >
+      <button class="btn btn--login" (click)="showFormLogin(true)">Log in</button>
+      <ul class="nav-container__sing-up">
+        <li class="nav-container__sing-up__list nav-container__sing-up__list--singUp" toggle>
+          <button class="btn btn--singUp-select"  >Sing up <span class="rectangle"></span></button>
+          <ul class="nav-container__sing-up__select">
+            <li class="nav-container__sing-up__list" (click)="showFormSingUp(true)">Sign up as user</li>
+            <li class="nav-container__sing-up__list" (click)="hideMenuLink($event, nav)"><a class="nav-container__sing-up__list--href" routerLink="/becomeExpert">Sign up as expert</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<header>
+  <div class="header__wrapper " >
+    <div class="nav-mobile-show nav-mobile-show--hide" #btn (click)="showMobileNav($event,btn,kek)">
+      <div class="nav-mobile-show__line"></div>
+      <div class="nav-mobile-show__line"></div>
+      <div class="nav-mobile-show__line"></div>
+    </div>
+    <a routerLink="/" class="logo" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"><app-brain></app-brain>MASTERMINDS</a>
+    <app-nav #kek></app-nav>
+  </div>
+</header>
+
+<div class="modal-wrapper" *ngIf="isShowLogin" (click)="closeLogin($event)">
+  <app-form> </app-form>
+</div>
+<div class="modal-wrapper" *ngIf="isShowSingUp" (click)="closeSingUp($event)">
+  <app-sing-up> </app-sing-up>
+</div>
+
+
+

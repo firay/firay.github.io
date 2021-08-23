@@ -1,0 +1,221 @@
+.nav-container{
+  display: flex;
+  align-items: center;
+}
+.nav-container__logo{
+  display: none;
+}
+.nav-list{
+  display: inline-block;
+  margin-left: 32px;
+  position: relative;
+  &:first-child{
+    margin-left: 0;
+    position: relative;
+  }
+}
+.fav-counter{
+  position: absolute;
+  right: 0;
+  top: -10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  padding: 2px 4px;
+  color: white;
+  background-color: #3366FF;
+  border-radius: 50%;
+  font-family: Roboto;
+  font-size: 8px;
+  line-height: 9px;
+}
+.nav-list__href{
+  display: inline-block;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: Roboto;
+  font-weight: bold;
+  color: #404040;
+}
+.nav-container__btn-wrapper{
+  margin-left: 40px;
+  display: flex;
+}
+.rectangle{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  color: white;
+  transition: 0.3s linear transform;
+}
+.btn--singUp-select{
+  color: white;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  margin-right: 5px;
+}
+.show .btn--singUp-select .rectangle{
+  transform: rotate(180deg);
+}
+.nav-container__sing-up__list--singUp{
+  border: 2px solid #3366FF;
+  padding: 3px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  background-color: #3366FF;
+  position: relative;
+}
+.nav-container__sing-up__list{
+  margin-top: 5px;
+  background-color: white;
+  border: 2px solid #3366FF;
+  color: #3366FF;
+  padding: 5px 10px;
+  font-family: Inner;
+  border-radius: 5px;
+}
+.nav-container__sing-up__list--singUp{
+  color: white;
+  border: none;
+  background-color: #3366FF;
+  cursor: pointer;
+  margin-top: 0;
+}
+.nav-container__sing-up__select{
+  position: absolute;
+  min-width: 130px;
+  left: 0;
+  top: 40px;
+  opacity: 0;
+  max-height: 0;
+  min-height: 0;
+  transition: all 0.3s linear;
+  overflow: hidden;
+}
+.nav-container__sing-up__select--open{
+  min-height: 130px;
+  max-height: 130px;
+  opacity: 1;
+  transition: all 0.3s linear;
+  z-index: 50;
+}
+.nav-container__sing-up__list--href{
+  color: #3366FF;
+}
+
+//animation
+.active-nav-link{
+  position: relative;
+}
+.active-nav-link:after{
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  display: block;
+  background-color: #FFFFFF;
+  opacity: 0.35;
+  animation: active-nav-link-animation 1.2s linear infinite;
+}
+@keyframes active-nav-link-animation {
+  0%{
+   width: 2%;
+  }
+  50%{
+    width: 40%;
+  }
+  100%{
+    width: 2%;
+    left: 98%;
+  }
+}
+
+//media
+
+@media (max-width: 772px) {
+  .nav-container__logo{
+    display: flex;
+    align-items: center;
+    color: #404040;
+  }
+  .nav{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(94, 94, 94, 0.25);
+    left: 0;
+    top: 0;
+    position: fixed;
+    transform: translateX(-100%);
+    transition: 0.5s ease-in-out transform;
+  }
+  .nav-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 83vw;
+    box-sizing: border-box;
+    background: white;
+    padding: 16px 20px 55px 20px;
+    z-index: 12;
+    &--show{
+      transform: translateX(0);
+      transition: 0.5s ease-in-out transform;
+      z-index: 12;
+    }
+  }
+  .horizontal-ul--nav{
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-list{
+    margin: 0;
+    padding: 20px 0 0 0;
+    &__href{
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  .nav-container__btn-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    & .btn{
+      margin-right: 0;
+      width: 100%;
+    }
+    .nav-container__sing-up{
+      width: 100%;
+    }
+  }
+  .btn--login{
+    margin-bottom: 20px;
+  }
+  .nav-container__sing-up__select{
+    display: flex;
+    min-height: 30px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .fav-counter{
+    top: 12px;
+  }
+}
+
+
+
+

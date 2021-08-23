@@ -1,0 +1,42 @@
+.form-expert-container{
+  max-width: 1152px;
+  margin: 60px auto 60px auto;
+  display: flex;
+  justify-content: center;
+  background-color: #FFFFFF;
+  padding: 60px 0;
+  box-sizing: border-box;
+  position: relative;
+  min-height: calc(100vh - 254px);
+}
+.expert-form{
+  font-family: Inner;
+}
+.expert-form__footer{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+
+}
+.standard-input--rate{
+  border-left: none;
+  transform: translateX(-3px);
+  margin-top: 0;
+  max-width: 74px;
+}
+@media (max-width: 1200px) {
+  .form-expert-container{
+    max-width: 768px;
+  }
+}
+@media (max-width: 770px) {
+  .form-expert-container{
+    max-width: 640px;
+  }
+  .expert-form-back{
+    top: 20px;
+    left: 20px;
+  }
+}
+
+

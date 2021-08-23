@@ -1,0 +1,37 @@
+<form [formGroup]="singUp" (ngSubmit)="onSubmit()" class="user-form" >
+<button class="btn btn--close" (click)="closeLoginForm($event)">
+    <app-close-svg></app-close-svg>
+  </button>
+  <b class="title title--logIn">Sign up</b>
+  <p class="form-sub-title">Complete the form to create your account</p>
+  <div class="user-form__item">
+    <label for="userName" class="input-label">Full name</label>
+    <input type="text" id="userName" class="standard-input" placeholder="John Doe" formControlName="userName">
+    <span class="input-error" *ngIf="!singUp.get('userName').valid && singUp.get('userName').touched">Enter valid name</span>
+  </div>
+  <div class="user-form__item">
+    <label for="email" class="input-label">Email</label>
+    <input type="email" id="email" class="standard-input" placeholder="example@email.com" formControlName="email">
+    <span class="input-error" *ngIf="!singUp.get('email').valid && singUp.get('email').touched">Enter valid email</span>
+  </div>
+  <div class="user-form__item">
+    <label for="createPassword" class="input-label">Create password</label>
+    <input type="password" id="createPassword" class="standard-input standard-input--password"
+           placeholder="***********" formControlName="password">
+    <span class="input-error" *ngIf=" !singUp.get('password').valid && singUp.get('password').touched">Enter password min length must be more than 6</span>
+  </div>
+  <div class="user-form__item">
+    <label for="confirmPassword" class="input-label">Confirm password</label>
+    <input  type="password" id="confirmPassword" class="standard-input standard-input--password"
+           placeholder="***********" formControlName="confirmPassword"/>
+    <span class="input-error" *ngIf=" !singUp.get('confirmPassword').valid && singUp.get('confirmPassword').touched && confirmPassword !== passwordValue">Password mismatch</span>
+  </div>
+  <div class="user-form__footer user-form__footer--singUp">
+    <button class="btn btn--login"[disabled] = "singUp.status !=='VALID'">Create an account</button>
+    <p class="user-form__action__text">Already have an account? <a class="btn btn--singUp--form" (click)="showLogInForm($event)" href="#">Log in</a></p>
+  </div>
+</form>
+
+
+
+<!---->

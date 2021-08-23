@@ -1,0 +1,94 @@
+<div class="form-expert-container">
+  <form class="expert-form" [formGroup]="expertForm" (ngSubmit)="onSubmit()" >
+    <div class="expert-form__first-part" *ngIf="firstScreen"  formGroupName="firstScreen">
+    <div class="expert-form__header">
+      <b class="title">Sign up as an expert</b>
+      <p class="form-sub-title">Complete the form to create your account</p>
+    </div>
+    <div class="expert-form__content">
+      <div class="user-form__item">
+        <label for="name" class="input-label">Full name</label>
+        <input type="text" id="name" formControlName="userName" class="standard-input" placeholder="John Doe">
+        <span class="input-error" *ngIf="!expertForm.get('firstScreen.userName').valid && expertForm.get('firstScreen.userName').touched">Enter valid name</span>
+      </div>
+      <div class="user-form__item">
+        <label for="email" class="input-label">Email</label>
+        <input type="email" id="email" formControlName="email" class="standard-input" placeholder="example@email.com">
+        <span class="input-error" *ngIf="!expertForm.get('firstScreen.email').valid && expertForm.get('firstScreen.email').touched">Enter valid email</span>
+      </div>
+      <div class="user-form__item">
+        <label for="password" class="input-label">Password</label>
+        <input type="password" id="password" formControlName="password" class="standard-input standard-input--password" placeholder="***********">
+        <span class="input-error" *ngIf="!expertForm.get('firstScreen.password').valid && expertForm.get('firstScreen.password').touched">Password length must be over than 5</span>
+      </div>
+      <div class="user-form__item">
+        <label for="confirmPassword" class="input-label">Confirm password</label>
+        <input type="password" id="confirmPassword" formControlName="confirmPassword" class="standard-input standard-input--password" placeholder="***********">
+        <span class="input-error" *ngIf="!expertForm.get('firstScreen.confirmPassword').valid && expertForm.get('firstScreen.confirmPassword').touched">Password mismatch
+        </span>
+      </div>
+    </div>
+    <div class="expert-form__footer">
+        <button class="btn btn--singUp" [disabled]="expertForm.get('firstScreen').status !== 'VALID'" type="button" (click)="showSecondScreen()">Next step</button>
+    </div>
+    </div>
+    <div class="expert-form__second-part" *ngIf="!firstScreen" formGroupName ="secondScreen">
+      <div class="expert-form-back" (click)="shoeFirstScreen()">
+        <app-arrow-svg [cssClass]="'menu-arrow'" ></app-arrow-svg>
+        <span class="expert-form-back__text" >Previous back</span>
+      </div>
+      <div class="expert-form__header">
+        <b class="title">Describe your expertise</b>
+        <p class="form-sup-title">Tell us more about yourself and start rocking</p>
+      </div>
+      <div class="expert-form__content">
+        <div class="user-form__item">
+          <label for="profession" class="input-label">Profession</label>
+          <select name="profession" id="profession"  class="standard-select" #selectValue formControlName="profession" (change)="loadAspectsValue(selectValue)">
+            <option value="Search" selected="selected">Search..</option>
+            <option value="web">Web Technology</option>
+            <option value="medicine">Medicine</option>
+            <option value="marketing">Marketing</option>
+            <option value="finance">Finance and banking</option>
+          </select>
+        </div>
+        <span class="input-error" *ngIf="!expertForm.get('secondScreen.profession').valid &&expertForm.get('secondScreen.profession').touched">select proffesion</span>
+        <div class="user-form__item">
+          <span *ngIf="loading">loading</span>
+          <label for="professionAspects" class="input-label">Professional aspects</label>
+          <select name="professionAspects" id="professionAspects" class="standard-select" formControlName="professionAspects">
+            <option value="Search" selected="selected" >Search..</option>
+            <option *ngFor="let item of optionsArr">{{item.name}}</option>
+          </select>
+          <span class="input-error" *ngIf="!expertForm.get('secondScreen.professionAspects').valid &&expertForm.get('secondScreen.professionAspects').touched">select profession Aspects</span>
+        </div>
+        <div class="user-form__item user-form__item--select-skills" #chooseAspects (click)="removeAspects($event)"></div>
+        <div class="user-form__item">
+          <label for="skills" class="input-label">Describe your skills and experience</label>
+          <textarea id="skills" class="standard-text-area" formControlName="skills"></textarea >
+          <span class="input-error" *ngIf="!expertForm.get('secondScreen.skills').valid && expertForm.get('secondScreen.skills').touched">
+            Enter some more information about you
+          </span>
+        </div>
+        <div class="user-form__item user-form__item__rate">
+          <label for="rate" class="input-label " >Hourly rate</label>
+          <div class="user-form__item__rate__decoration">
+            <span class="rate-decoration"><dollar-svg></dollar-svg></span>
+            <input type="text" id="rate" formControlName="rate" class="standard-input standard-input--rate" placeholder="10.00">
+            <span class="input-error" *ngIf="!expertForm.get('secondScreen.rate').valid && expertForm.get('secondScreen.rate').touched">Enter your price</span>
+          </div>
+        </div>
+        <div class="user-form__item user-form__item--agree">
+          <input type="checkbox" checked="checked" id="agree"  formControlName="agree"  class="standard-input" placeholder="***********">
+          <label for="agree" class="input-label input-label__agree"> I agree with <a routerLink="/" class="user-form__link">Terms of Service</a> and <a routerLink="/" class="user-form__link">Privacy Policy</a></label>
+          <span class="input-error" *ngIf="!expertForm.get('secondScreen.agree').valid && expertForm.get('secondScreen.agree').touched">
+            please accept policy
+          </span>
+        </div>
+      </div>
+      <div class="expert-form__footer">
+        <button class="btn btn--singUp" type="submit">Become an expert</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,86 @@
+<app-loading *ngIf="isLoading"></app-loading>
+<div class="wrapper wrapper--expert" *ngFor="let item of expert">
+  <div class="expert-profile" >
+    <div class="expert-profile__img">
+      <app-user-photo-svg cssClass="expert-svg" *ngIf="!item.img"></app-user-photo-svg>
+      <img src="{{item.img}}" *ngIf="item.img" alt=""/>
+    </div>
+    <div class="expert-profile__desc">
+      <p class="text text--blue text--blue--mobile">Rate: {{item.rate}}/h</p>
+      <b class="title title--small">{{item.name}}</b>
+      <p class="expert-profile__text">{{item.profession}}</p>
+      <ul class="expert-profile__star">
+        <li *ngFor="let svgItem of [].constructor(5) let i = index">
+          <star-svg [index]="i" [starRate]="item.starRate"></star-svg>
+        </li>
+      </ul>
+      <p class="expert-profile__text expert-profile__text--small">based on {{item.basedRate}} reviews</p>
+    </div>
+    <div class="expert-profile__btn-container">
+      <button type="button" class="btn btn--blue" (click)="getShowModal()">Contact me</button>
+      <button type="button" *ngIf="isAuth" class="btn btn--white" (click)="addFavourite(item.id)">Like</button>
+      <button type="button" *ngIf="isAuth" class="btn btn--blue" (click)="removeFavourite(item.id)">Dislike</button>
+    </div>
+  </div>
+  <div class="expert-description" *ngFor="let item of expert">
+    <div class="expert-profile-professional-aspects">
+      <b class="title title--small">Professional aspects</b>
+      <ul class="expert-description__aspects">
+        <li class="expert-description__aspects__list">
+          <span class="professionAspects" *ngFor="let item of item.professionAspects">{{item}}</span>
+        </li>
+      </ul>
+      <p class="text text--blue">Rate: {{item.rate}}/h</p>
+    </div>
+    <b class="title title--small">Profile</b>
+    <p class="expert-description__text expert-description__text--{{i}}" *ngFor="let expertDesc of item.expertDescription let i = index">{{expertDesc}}</p>
+  </div>
+  <div class="expert-profile__reviews">
+    <b class="title title--small">Reviews</b>
+    <ul class="reviews-lists">
+      <li class="reviews-list">
+        <img src="/assets/img/Thomas.png" alt="Avatar" class="reviews-list__img">
+        <div class="reviews-list__container">
+          <div class="reviews-list__title">
+            <b class="title title--small">Thomas H.</b>
+            <ul class="expert-profile__star expert-profile__star--reviews">
+              <li *ngFor="let svgItem of [].constructor(5) let i = index"><star-svg [index]="i" [starRate]="4"></star-svg></li>
+            </ul>
+          </div>
+          <p class="reviews-list__profile__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis
+            sollicitudin varius. Morbi massa enim, vulputate in pulvinar in, congue ut ipsum. Ut a turpis consectetur,
+            vestibulum nibh id, dapibus urna...</p>
+        </div>
+      </li>
+      <li class="reviews-list">
+        <img src="/assets/img/Ella.png" alt="Avatar" class="reviews-list__img">
+        <div class="reviews-list__container">
+          <div class="reviews-list__title">
+            <b class="title title--small">Ella D.</b>
+            <ul class="expert-profile__star expert-profile__star--reviews">
+              <li *ngFor="let svgItem of [].constructor(5) let i = index"><star-svg [index]="i" [starRate]="5"></star-svg></li>
+            </ul>
+          </div>
+          <p class="reviews-list__profile__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis
+            sollicitudin varius. Morbi massa enim, vulputate in pulvinar in, congue ut ipsum. Ut a turpis consectetur,
+            vestibulum nibh id, dapibus urna...</p>
+        </div>
+      </li>
+      <li class="reviews-list">
+        <img src="/assets/img/Michael.png" alt="Avatar" class="reviews-list__img">
+        <div class="reviews-list__container">
+          <div class="reviews-list__title">
+            <b class="title title--small">Michael I..</b>
+            <ul class="expert-profile__star expert-profile__star--reviews">
+              <li *ngFor="let svgItem of [].constructor(5) let i = index"><star-svg [index]="i" [starRate]="5"></star-svg></li>
+            </ul>
+          </div>
+          <p class="reviews-list__profile__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis
+            sollicitudin varius. Morbi massa enim, vulputate in pulvinar in, congue ut ipsum. Ut a turpis consectetur,
+            vestibulum nibh id, dapibus urna...</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<app-expert-modal *ngIf="showModal" [expert]="expert"></app-expert-modal>

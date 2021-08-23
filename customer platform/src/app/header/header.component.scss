@@ -1,0 +1,123 @@
+header{
+  padding: 16px 0;
+  background-color: #FFFFFF;
+}
+.logo{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 22px;
+  line-height: 26px;
+  color: #404040;
+  position: relative;
+}
+.active-link:after{
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  bottom: 2px;
+  animation: activeLinkAnimation infinite 2s linear;
+  height: 102%;
+  opacity: .35;
+}
+.header__wrapper{
+  max-width: 1152px;
+  padding: 0 40px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn--menu{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 20px;
+  &__line{
+    display: block;
+    width: 100%;
+    border-top: 3px solid #404040;
+  }
+}
+.modal-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(94, 94, 94, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@keyframes activeLinkAnimation {
+  0%{
+    width: 2%;
+    opacity: .35;
+    left: 0;
+  }
+  20%{
+    width: 6%;
+    opacity: .35;
+  }
+  25%{
+    width: 8%;
+    opacity: .35;
+    left: 16%;
+  }
+  50%{
+    width: 16%;
+    opacity: .35;
+  }
+  90%{
+    width: 8%;
+    left: 90%;
+    opacity: .35;
+  }
+  100%{
+    width:6%;
+    left: 96%;
+    opacity: .45;
+  }
+}
+.nav-mobile-show{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  width: 32px;
+  &__line{
+    display: block;
+    width: 100%;
+    border-bottom: 3px solid #404040;
+  }
+}
+//media
+
+@media (max-width: 980px) {
+  header{
+    padding:  14px 20px;
+  }
+  .header__wrapper{
+    padding: 0;
+  }
+}
+@media (max-width: 772px) {
+  .nav-mobile-show{
+    display: flex;
+  }
+  .btn--menu{
+    display: flex;
+  }
+}
+@media (max-width: 556px) {
+
+}
