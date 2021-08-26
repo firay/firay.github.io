@@ -29,7 +29,7 @@ export class authServices {
 
   getSuccessStatus (){
       this.timer = setInterval(()=>{
-        this.fetchData().subscribe((resp:any)=>{
+        this.fetchData().subscribe(resp=>{
           this.successPost = resp[this.counter].status;
           ++this.counter
           if (this.successPost){
