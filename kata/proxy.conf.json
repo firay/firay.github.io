@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "https://firay-d46db-default-rtdb.firebaseio.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

@@ -6,21 +6,22 @@ import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { PostStatusComponent } from './post-status/post-status.component';
-import { PostErrorComponent } from './post-error/post-error.component';
+import {FormsModule} from "@angular/forms";
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponentComponent,
     PostStatusComponent,
-    PostErrorComponent
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
