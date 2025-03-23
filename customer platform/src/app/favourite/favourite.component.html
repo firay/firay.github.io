@@ -1,9 +1,0 @@
-<div class="wrapper">
-  <b class="title title--main">Favorites</b>
-  <div class="expert-gallery" *ngIf="showFavArr.length >0">
-    <app-expert-gallery-item  *ngFor="let item of showFavArr" [item]="item"></app-expert-gallery-item>
-  </div>
-  <div class="not-favourite-item" *ngIf="showFavArr.length === 0">
-    add some favorite expert
-  </div>
-</div>
